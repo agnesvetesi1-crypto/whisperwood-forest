@@ -23,7 +23,7 @@ Pixar/Disney 3D animation style. Establishing shot of Whisperwood Forest at gold
 @Coco suddenly freezes mid-step, eyes going WIDE with amazement. Camera reveals a vivid electric-blue butterfly resting on a yellow flower nearby, wings slowly opening and closing, shimmering in golden light. Close-up on Coco's face — pure wonder and longing. She reaches one paw toward it. Pixar/Disney 3D animation style.
 
 **lines:**
-- Coco (voice: Pixie): "Oh... oh my. You are the most beautiful thing I have ever seen in my whole entire life. I'm going to catch you. And then you can be mine forever!"
+- Coco (voice: Simone): "Oh... oh my. You are the most beautiful thing I have ever seen in my whole entire life. I'm going to catch you. And then you can be mine forever!"
 
 ---
 
@@ -34,7 +34,7 @@ The blue butterfly lifts off and flutters away. @Coco immediately chases after i
 
 **lines:**
 - Narrator (voice: Emily): "And so the chase began! The butterfly fluttered from flower to flower, and Coco followed — jumping, running, and tumbling through the forest."
-- Coco (voice: Pixie): "Almost got you — whoa!"
+- Coco (voice: Simone): "Almost got you — whoa!"
 
 ---
 
@@ -44,7 +44,7 @@ The blue butterfly lifts off and flutters away. @Coco immediately chases after i
 @Coco continues chasing the blue butterfly through the forest. She crawls under a leafy bush — a leaf gets stuck comically on top of her head — pops out the other side, then scrambles up and over a big mossy fallen log, sliding down the other side with a thud, panting heavily. The butterfly floats serenely ahead, completely unbothered. Pixar/Disney 3D animation style, warm forest light.
 
 **lines:**
-- Coco (voice: Pixie): "I can do this. I just need to be a little bit faster... Wait! Please — just — wait for me!"
+- Coco (voice: Simone): "I can do this. I just need to be a little bit faster... Wait! Please — just — wait for me!"
 
 ---
 
@@ -55,7 +55,7 @@ The blue butterfly lifts off and flutters away. @Coco immediately chases after i
 
 **lines:**
 - Oliver (voice: Arthur): "Good afternoon, Coco. You seem to be in quite a hurry today."
-- Coco (voice: Pixie): "Oliver! I've been chasing that butterfly and I can't catch it and it's SO beautiful and I just want to keep it forever — have you seen which way it went?"
+- Coco (voice: Simone): "Oliver! I've been chasing that butterfly and I can't catch it and it's SO beautiful and I just want to keep it forever — have you seen which way it went?"
 
 ---
 
@@ -66,7 +66,7 @@ The blue butterfly lifts off and flutters away. @Coco immediately chases after i
 
 **lines:**
 - Oliver (voice: Arthur): "Hm. I did see it, yes. But tell me something first, little one. Why do you want to catch it?"
-- Coco (voice: Pixie): "Because it's beautiful! I want to look at it every single day. I want it to be mine."
+- Coco (voice: Simone): "Because it's beautiful! I want to look at it every single day. I want it to be mine."
 
 ---
 
@@ -77,7 +77,7 @@ The blue butterfly lifts off and flutters away. @Coco immediately chases after i
 
 **lines:**
 - Oliver (voice: Arthur): "And do you think... that a butterfly is happy, sitting still in one place? Never flying? Never dancing on the wind?"
-- Coco (voice: Pixie): "I... I never thought about that."
+- Coco (voice: Simone): "I... I never thought about that."
 - Oliver (voice: Arthur): "Come. I want to show you something."
 
 ---
@@ -98,7 +98,7 @@ The blue butterfly lifts off and flutters away. @Coco immediately chases after i
 @Oliver and @Coco step out of the forest edge together into a breathtaking open meadow. Warm golden afternoon sun. Dozens of vivid colorful butterflies fly freely over a sea of wildflowers in every color. Coco stops in her tracks, mouth slightly open, eyes filling with overwhelming wonder. Pixar/Disney 3D animation style, camera swings slowly around to reveal her amazed face with the meadow behind her.
 
 **lines:**
-- Coco (voice: Pixie): "Oh... oh wow."
+- Coco (voice: Simone): "Oh... oh wow."
 - Oliver (voice: Arthur): "This is where they come to be free, Coco. Every single one of them. Not one, not yours — all of them, together."
 
 ---
@@ -110,7 +110,7 @@ Wide cinematic shot of the magical meadow. Dozens of beautiful butterflies danci
 
 **lines:**
 - Oliver (voice: Arthur): "Isn't that more beautiful than one butterfly in a box?"
-- Coco (voice: Pixie): "It's the most beautiful thing I've ever seen."
+- Coco (voice: Simone): "It's the most beautiful thing I've ever seen."
 
 ---
 
@@ -130,7 +130,7 @@ Wide cinematic shot of the magical meadow. Dozens of beautiful butterflies danci
 The blue butterfly gently lifts off @Coco's nose and floats freely away into the golden light over the meadow. Coco's eyes follow it, glistening, a soft smile forming. @Oliver watches nearby with a warm knowing expression. Pixar/Disney 3D animation style, warm emotional lighting.
 
 **lines:**
-- Coco (voice: Pixie): "It chose me. It came to me on its own."
+- Coco (voice: Simone): "It chose me. It came to me on its own."
 - Oliver (voice: Arthur): "Sometimes, the most beautiful things find us — when we stop trying to hold on to them."
 
 ---
@@ -151,7 +151,7 @@ Golden sunset. @Coco sits peacefully at the edge of the meadow, silhouetted agai
 @Coco turns to face the camera directly, warm happy smile, still in the golden sunset meadow. @Oliver visible in the soft background, watching fondly. Camera slowly pulls back to reveal the whole magical meadow. Pixar/Disney 3D animation style, warm inviting closing light.
 
 **lines:**
-- Coco (voice: Pixie): "I'm really glad that butterfly found me instead. There's always something new happening here in Whisperwood Forest — come back soon and see what we get up to next!"
+- Coco (voice: Simone): "I'm really glad that butterfly found me instead. There's always something new happening here in Whisperwood Forest — come back soon and see what we get up to next!"
 
 ---
 

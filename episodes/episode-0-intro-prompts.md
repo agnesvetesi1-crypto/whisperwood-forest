@@ -34,7 +34,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Coco bounds energetically into frame through the sunlit forest, skids to a stop, spins once with excitement, big grin, tail wagging fast. Pixar/Disney 3D animation style.
 
 **lines:**
-- Coco (voice: Pixie): "Hi! Hi hi hi! My name's Coco — I'm a fox, in case the tail and the ears didn't already give it away!"
+- Coco (voice: Simone): "Hi! Hi hi hi! My name's Coco — I'm a fox, in case the tail and the ears didn't already give it away!"
 
 ---
 
@@ -44,7 +44,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Coco talking animatedly, gesturing with her paws, eyes wide with enthusiasm, standing among flowers. Pixar/Disney 3D animation style.
 
 **lines:**
-- Coco (voice: Pixie): "I love finding new things — bugs, berries, butterflies, weird noises coming from the bushes, all of it! If something exciting is happening anywhere in this forest, I'm probably already there — usually before I've finished thinking it through."
+- Coco (voice: Simone): "I love finding new things — bugs, berries, butterflies, weird noises coming from the bushes, all of it! If something exciting is happening anywhere in this forest, I'm probably already there — usually before I've finished thinking it through."
 
 ---
 
@@ -54,7 +54,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Coco's ears perk up suddenly at a rustling sound offscreen. Her eyes go wide with delight, and she dashes off toward it without hesitation, disappearing into the bushes mid-sentence. Pixar/Disney 3D animation style, playful energetic motion.
 
 **lines:**
-- Coco (voice: Pixie): "Ooh, wait — did you hear that?! I have to go check — nice meeting you, bye!"
+- Coco (voice: Simone): "Ooh, wait — did you hear that?! I have to go check — nice meeting you, bye!"
 
 ---
 
@@ -94,7 +94,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Benny peeks out shyly from behind a large flower, ears twitching nervously, small and gray, big cautious eyes. Pixar/Disney 3D animation style, soft dappled light.
 
 **lines:**
-- Benny (voice: Quinn): "Um. Hello. I'm... I'm Benny. I'm a bunny. I'm a little bit shy — you probably already noticed that."
+- Benny (voice: Chloe): "Um. Hello. I'm... I'm Benny. I'm a bunny. I'm a little bit shy — you probably already noticed that."
 
 ---
 
@@ -104,7 +104,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Benny slowly steps out fully from behind the flower, still nervous but standing a little taller, ears slowly relaxing. Pixar/Disney 3D animation style.
 
 **lines:**
-- Benny (voice: Quinn): "My friends say I'm braver than I think I am. I'm... still not totally sure about that. But I'm working on it. Every day, a little bit."
+- Benny (voice: Chloe): "My friends say I'm braver than I think I am. I'm... still not totally sure about that. But I'm working on it. Every day, a little bit."
 
 ---
 
@@ -114,7 +114,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Benny takes a deep breath, closes his eyes, then hops forward bravely over a small log he was clearly nervous about, landing safely and opening his eyes with surprised pride. Pixar/Disney 3D animation style, warm encouraging light.
 
 **lines:**
-- Benny (voice: Quinn): "See? A little bit braver already."
+- Benny (voice: Chloe): "See? A little bit braver already."
 
 ---
 
@@ -145,7 +145,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 
 **lines:**
 - Bruno (voice: Marcus): "See? Perfectly safe."
-- Benny (voice: Quinn): "Okay, this part I like."
+- Benny (voice: Chloe): "Okay, this part I like."
 
 ---
 
@@ -155,7 +155,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Luna stands tall and calm at the edge of the clearing, alert posture, gray fur catching the light, scanning the forest protectively before her expression softens. Pixar/Disney 3D animation style.
 
 **lines:**
-- Luna (voice: Simone): "I'm Luna. Wolf. I keep an eye on everyone out here."
+- Luna (voice: Remy): "I'm Luna. Wolf. I keep an eye on everyone out here."
 
 ---
 
@@ -165,7 +165,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Luna walks calmly along a ridge overlooking the forest, watching over the distant clearing where the other friends are gathered. Pixar/Disney 3D animation style, warm late-afternoon light.
 
 **lines:**
-- Luna (voice: Simone): "Not because they need it, exactly. Just because that's what friends do for each other. If you're ever lost in Whisperwood Forest, just call out. I'll hear you."
+- Luna (voice: Remy): "Not because they need it, exactly. Just because that's what friends do for each other. If you're ever lost in Whisperwood Forest, just call out. I'll hear you."
 
 ---
 
@@ -175,7 +175,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Luna's ears perk toward a faint sound in the distance. She turns her head sharply, then relaxes and softens into a small warm smile toward camera. Pixar/Disney 3D animation style.
 
 **lines:**
-- Luna (voice: Simone): "Come on. I think you'll like the next one."
+- Luna (voice: Remy): "Come on. I think you'll like the next one."
 
 ---
 
@@ -185,7 +185,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Hazel twirls gracefully through tall grass in a sunlit meadow, petals drifting around her, elegant and light on her feet. Pixar/Disney 3D animation style, dreamy golden light.
 
 **lines:**
-- Hazel (voice: Tallulah): "I'm Hazel! Doesn't the wind sound like music today?"
+- Hazel (voice: Hana): "I'm Hazel! Doesn't the wind sound like music today?"
 
 ---
 
@@ -195,7 +195,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Hazel pauses mid-dance to gently touch a dewdrop resting on a leaf, watching it sparkle with delight. Pixar/Disney 3D animation style, soft magical light.
 
 **lines:**
-- Hazel (voice: Tallulah): "I love to dance, I love to sing, and I love finding beauty in the smallest things — a dewdrop, a leaf falling just right. This forest is full of it, if you just slow down and look."
+- Hazel (voice: Hana): "I love to dance, I love to sing, and I love finding beauty in the smallest things — a dewdrop, a leaf falling just right. This forest is full of it, if you just slow down and look."
 
 ---
 
@@ -205,7 +205,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Hazel spins one final graceful turn, arms open, flower petals swirling around her in the golden light, then comes to a gentle stop facing the camera with a warm smile. Pixar/Disney 3D animation style.
 
 **lines:**
-- Hazel (voice: Tallulah): "Come dance along with us — there's still so much forest left to see."
+- Hazel (voice: Hana): "Come dance along with us — there's still so much forest left to see."
 
 ---
 
@@ -215,7 +215,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Milo fidgets nervously in place, small spiky brown hedgehog, glancing around anxiously before straightening up with effort. Pixar/Disney 3D animation style, soft forest light.
 
 **lines:**
-- Milo (voice: Gideon): "M-Milo. Hedgehog. I like rules, I like plans, and I like knowing exactly what's going to happen before it happens."
+- Milo (voice: Leo): "M-Milo. Hedgehog. I like rules, I like plans, and I like knowing exactly what's going to happen before it happens."
 
 ---
 
@@ -225,7 +225,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Milo curls slightly into a small worried ball for a moment, then slowly uncurls, taking a deep breath, standing a bit taller with a small proud smile. Pixar/Disney 3D animation style.
 
 **lines:**
-- Milo (voice: Gideon): "Which, living with this group, almost never happens. But... I wouldn't trade them for anything. Probably. Okay — definitely."
+- Milo (voice: Leo): "Which, living with this group, almost never happens. But... I wouldn't trade them for anything. Probably. Okay — definitely."
 
 ---
 
@@ -235,7 +235,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Milo checks over his shoulder nervously, then musters courage and takes a small determined step forward toward camera. Pixar/Disney 3D animation style, warm encouraging light.
 
 **lines:**
-- Milo (voice: Gideon): "Okay. Okay, let's keep going. One more friend to meet — the fast one. Very fast."
+- Milo (voice: Leo): "Okay. Okay, let's keep going. One more friend to meet — the fast one. Very fast."
 
 ---
 
@@ -245,7 +245,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Pip zips rapidly across tree branches in quick darting movements, skids to a sudden stop right in front of camera, wide excited grin, tail flicking fast. Pixar/Disney 3D animation style, energetic motion.
 
 **lines:**
-- Pip (voice: Remy): "HiI'mPip! Squirrel! I collect acorns, I climb literally everything, and I already know what everyone else just said because I was listening while also doing three other things!"
+- Pip (voice: Zane): "HiI'mPip! Squirrel! I collect acorns, I climb literally everything, and I already know what everyone else just said because I was listening while also doing three other things!"
 
 ---
 
@@ -255,7 +255,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Pip darts up a tree trunk in a spiral, grabs an acorn mid-motion, and leaps to the next branch without slowing down, energy never stopping. Pixar/Disney 3D animation style.
 
 **lines:**
-- Pip (voice: Remy): "I know every shortcut in this whole forest — this way's faster, that way's faster, honestly most ways are faster if you just commit—"
+- Pip (voice: Zane): "I know every shortcut in this whole forest — this way's faster, that way's faster, honestly most ways are faster if you just commit—"
 
 ---
 
@@ -265,7 +265,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Pip suddenly freezes mid-motion, realizing something, then grins and points offscreen toward the group. Pixar/Disney 3D animation style, warm light.
 
 **lines:**
-- Pip (voice: Remy): "Wait that's everybody! Okay bye — I mean hi — I mean, let's go find the others!"
+- Pip (voice: Zane): "Wait that's everybody! Okay bye — I mean hi — I mean, let's go find the others!"
 
 ---
 
@@ -285,7 +285,7 @@ Wide golden-hour shot: all eight characters — @Coco, @Oliver, @Benny, @Bruno, 
 @Coco steps forward from the group toward camera, big warm smile, waving. The other seven friends visible behind her still waving. Golden sunset light. Camera slowly pulls back to reveal the whole forest. Pixar/Disney 3D animation style.
 
 **lines:**
-- Coco (voice: Pixie): "There's always something new happening here in Whisperwood Forest — come back soon and see what we get up to next!"
+- Coco (voice: Simone): "There's always something new happening here in Whisperwood Forest — come back soon and see what we get up to next!"
 
 ---
 

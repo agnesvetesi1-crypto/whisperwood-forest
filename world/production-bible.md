@@ -22,17 +22,17 @@ Each character has a fixed visual description (used with Higgsfield's `@Element`
 
 | Character | Role / personality | Visual reference (for @Element upload) | Voice (Higgsfield preset) | voice_id |
 |---|---|---|---|---|
-| **Coco the Fox** | Curious, energetic, acts before thinking. Series lead. | Small young female fox, bright orange fur, white chest patch, white tail tip, oversized amber eyes, fluffy tail | Pixie | `0178ef57-ada4-43d9-992b-8d9221045bb4` |
+| **Coco the Fox** | Curious, energetic, acts before thinking. Series lead. | Small young female fox, bright orange fur, white chest patch, white tail tip, oversized amber eyes, fluffy tail | Simone | `d3b201aa-086c-4d54-8568-a6bb9f4a0b63` |
 | **Oliver the Owl** | Wise, calm, gently teaches lessons | Medium barn owl, warm brown/cream feathers, small round wire glasses, dignified posture | Arthur | `30fc8796-ceb6-4a66-b3a7-4a145ef7f346` |
-| **Benny the Bunny** | Shy, kind, braver than he thinks | Small gray rabbit, big cautious eyes, twitchy ears | Quinn | `80914268-dfae-4f76-8306-36f2d55f58f8` |
+| **Benny the Bunny** | Shy, kind, braver than he thinks | Small gray rabbit, big cautious eyes, twitchy ears | Chloe | `e9cfbbf0-4476-46be-b396-596eb774b165` |
 | **Bruno the Bear** | Big, warm, always hungry, gentle | Large brown bear, soft rounded shape, warm chuckle | Marcus | `6f98d3dd-324f-4845-8c28-c1d1647a06cd` |
-| **Luna the Wolf** | Protective, steady, quiet leader | Gray wolf, alert but warm posture | Simone | `d3b201aa-086c-4d54-8568-a6bb9f4a0b63` |
-| **Hazel the Deer** | Graceful, artistic, loves beauty | Tan deer, small antlers, elegant movement | Tallulah | `f32c8f51-449e-4ddf-bdf7-1527e11df917` |
-| **Milo the Hedgehog** | Anxious, rule-following, secretly brave | Small brown spiky hedgehog | Gideon | `1ad38ba4-9cc4-4f2f-9fde-b0fefdf67ae5` |
-| **Pip the Squirrel** | Fast-talking, hyper, always half a step ahead | Red squirrel, quick movements | Remy | `b9c5c5db-4eb7-468a-a0b7-d06423af0335` |
+| **Luna the Wolf** | Protective, steady, quiet leader | Gray wolf, alert but warm posture | Remy | `b9c5c5db-4eb7-468a-a0b7-d06423af0335` |
+| **Hazel the Deer** | Graceful, artistic, loves beauty | Tan deer, small antlers, elegant movement | Hana | `c25f78a0-714e-42af-8da3-a399cef94968` |
+| **Milo the Hedgehog** | Anxious, rule-following, secretly brave | Small brown spiky hedgehog | Leo | `73a45c18-0c56-4642-a61e-f6b303f8ded1` |
+| **Pip the Squirrel** | Fast-talking, hyper, always half a step ahead | Red squirrel, quick movements | Zane | `9ddbff06-a984-4c0d-b641-4d8ca846bf60` |
 | **Narrator** | Warm, calm, gentle storyteller — not a character in-world | — | Emily | `6b3e3642-f7b7-4cb8-9688-51e233c4b92f` |
 
-> Note: these voice assignments are a reasonable starting guess based on name/tone only — Ági should preview each in the Higgsfield voice picker before locking them in. Once chosen, the ID goes in this table and never changes.
+> Note: voices previewed and locked in by Ági on 2026-08-01. These IDs are final and must not change between episodes.
 
 ---
 
