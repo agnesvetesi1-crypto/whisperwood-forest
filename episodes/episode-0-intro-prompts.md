@@ -6,7 +6,7 @@ Each clip below has two parts for the decoupled audio workflow (see concept doc 
 - **video_prompt** → send to `generate_video` (Seedance 2.0, 15s, visuals + ambient sfx only)
 - **lines** → send to `generate_audio` separately, one call per speaker, using the locked voice_id from the character table
 
-> **Lip-sync fix:** for any clip where a character speaks directly to camera, use the **video_prompt (lip-sync)** version below instead of the plain one — it has the actual dialogue baked into the prompt so the mouth movement matches the words. Always set **`generate_audio: false`** on these (mute native audio) — the real voice gets dubbed in separately at the locked voice_id in assembly. Clips 1, 2, and 27 have no close-up speaker on screen, so the plain video_prompt is fine as-is.
+> **Lip-sync fix:** for any clip where a character speaks directly to camera, use the **video_prompt (lip-sync)** version below instead of the plain one — it has the actual dialogue baked into the prompt so the mouth movement matches the words. Set **`generate_audio: true`** on these — Seedance's native audio gives nice ambient/foley sound worth keeping. Don't bother uploading the locked-voice line as an audio reference: Seedance's audio-reference input is for rhythm/timing/mood, not voice cloning, so it won't actually make the character speak in the locked voice. Instead, the correct voice gets layered in at final assembly — the locked-voice dialogue track (linked per clip) goes on top, native ambience stays underneath. Clips 1, 2, and 27 have no close-up speaker on screen, so the plain video_prompt is fine as-is.
 
 ---
 
