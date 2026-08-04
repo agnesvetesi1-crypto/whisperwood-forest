@@ -47,3 +47,6 @@ continuous ~7 min track: calm/wondrous intro, playful main body, warm ending.
 Each clip: native video audio ducked under the dialogue/narration line, dialogue starts
 at 0:00 of the clip. All 28 clips concatenated in order. Music bed laid underneath the
 whole thing at low volume for the full runtime.
+
+**Status: DONE.** Final assembled episode (7:01, 123MB):
+https://d2ol7oe51mr4n9.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/6d8ceb6b-8a17-4bb0-8a5c-da2c0c7f5470.mp4
