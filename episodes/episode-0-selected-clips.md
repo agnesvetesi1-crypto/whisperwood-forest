@@ -42,6 +42,19 @@ nothing pending.
 Generated via vidIQ (`vidiq_generate_music`) in 3 mood sections, crossfaded into one
 continuous ~7 min track: calm/wondrous intro, playful main body, warm ending.
 
+## Raw materials for manual CapCut assembly (2026-08-04)
+
+Per user request — assembling manually in CapCut instead of the automated mix, for exact
+lip-sync control. Delivered:
+
+- **Raw video, 28 clips concatenated, original native audio untouched** (forest ambience,
+  Seedance's own dialogue guess — nothing muted or mixed):
+  https://d2ol7oe51mr4n9.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/fe86c18c-30f5-469b-a577-f92cfc472f3f.mp4
+- **All audio tracks zipped** (3 narration lines, 26 character dialogue lines each in its
+  own file named `klipNN_Character.wav`, the 3 music mood sections plus one already
+  crossfaded into a continuous ~7min bed):
+  https://d2ol7oe51mr4n9.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/cd5fb4c4-9fcd-48b2-8166-727e5cdbc2d6.zip
+
 ## Assembly
 
 Each clip: native video audio ducked under the dialogue/narration line, dialogue starts
