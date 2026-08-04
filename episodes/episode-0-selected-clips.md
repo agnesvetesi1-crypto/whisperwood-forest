@@ -48,5 +48,13 @@ Each clip: native video audio ducked under the dialogue/narration line, dialogue
 at 0:00 of the clip. All 28 clips concatenated in order. Music bed laid underneath the
 whole thing at low volume for the full runtime.
 
-**Status: DONE.** Final assembled episode (7:01, 123MB):
-https://d2ol7oe51mr4n9.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/6d8ceb6b-8a17-4bb0-8a5c-da2c0c7f5470.mp4
+**Status: DONE (fixed pass, 2026-08-04).** First cut had 3 problems: choppy music (AAC
+stream-copy concat across 28 clips glitches at splice points), original Seedance dialogue
+still audible under the dub (native track only ducked to 30%, not enough), and dub audio
+starting before the character's mouth moves (always placed at clip t=0, ignoring the
+pre-speech setup action in the prompt). Fixed by: rebuilding the whole audio track as
+gapless PCM/WAV concatenation instead of AAC, dropping native audio to ~3% (nearly muted)
+so only the dub voice reads, and adding a per-clip `adelay` (estimated from each clip's
+described pre-speech action) before mixing in the dub. Video track reused as-is (visuals
+were fine). Final video (7:01, 123MB):
+https://d2ol7oe51mr4n9.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/5e80dfe5-9a4e-4212-a6ed-b36287af50f2.mp4
