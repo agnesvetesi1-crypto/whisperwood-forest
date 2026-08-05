@@ -21,11 +21,12 @@ Each clip below has two parts for the decoupled audio workflow (see concept doc 
 > underneath. No duplicate characters in frame; when two characters share a clip, only the
 > speaking one's mouth moves, the other stays silent.
 >
-> **Narrator-only clips (1 and 13) never get the narration text written into the
-> `video_prompt` itself** — only a plain scene description plus a note that no character
-> speaks on camera. Putting narration words into the video prompt makes Seedance invent
-> its own random spoken audio for the clip, which we don't want; the narrator line only
-> ever goes in the `lines` section below, generated separately.
+> **Narrator-only clips (1 and 13) and the no-dialogue beat (4) get a pure scene
+> description in `video_prompt` — no mention of narration, voice-over, or speech at
+> all**, not even a line like "no character speaks on camera." Any reference to
+> narration or speech in the prompt, even to say there isn't any, makes Seedance invent
+> its own random spoken audio for the clip. Just describe what's on screen; the narrator
+> line only ever goes in the `lines` section below, generated separately.
 
 ---
 
@@ -36,8 +37,7 @@ Pixar/Disney 3D animation style. Establishing shot of Whisperwood Forest in the 
 late-afternoon light. Camera drifts slowly across a quiet clearing near a stream, sunlight
 filtering through the canopy, a light breeze rustling the leaves, birds calling softly in
 the distance. Warm, peaceful, everyday mood. No characters visible yet. Ambient forest
-sound only, no background music or score. No character speaks on camera — this is
-Narrator voice-over only.
+sound only, no background music or score.
 
 **lines:**
 - Narrator (voice: Liza): "Every day in Whisperwood Forest is a little different — today starts with someone in an awfully big hurry."
@@ -89,9 +89,8 @@ score, ambient forest sound only. Pixar/Disney 3D animation style.
 Pixar/Disney 3D animation style. @Pip bursts through the same clearing at full speed,
 completely focused on the horizon ahead, and barrels straight through Milo's little leaf
 house without looking down — leaves and twigs scatter into the air behind him. He is
-already gone before the last leaf settles. No character speaks on camera — this is a
-visual-only comedic beat, nobody is present to react yet. Ambient forest sound plus a
-soft scattering/crunching sound only, no background music or score.
+already gone before the last leaf settles. Ambient forest sound plus a soft
+scattering/crunching sound only, no background music or score.
 
 **lines:**
 *(none — visual-only beat, no dialogue or narration)*
@@ -250,8 +249,7 @@ ambient forest sound only. Pixar/Disney 3D animation style.
 Pixar/Disney 3D animation style. @Pip and @Milo work side by side in the golden
 late-afternoon light — Pip carefully carrying one leaf at a time instead of rushing, Milo
 directing and placing them, the little house slowly rising again, a little sturdier than
-before. Warm, satisfied mood. No character speaks on camera — this is Narrator
-voice-over only. Ambient forest sound only, no background music or score.
+before. Warm, satisfied mood. Ambient forest sound only, no background music or score.
 
 **lines:**
 - Narrator (voice: Liza): "Pip learned that sorry is just the beginning — the rest is showing up, and helping put things right."
