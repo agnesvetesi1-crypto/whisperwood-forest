@@ -26,11 +26,11 @@ Each character has a fixed visual description (used with Higgsfield's `@Element`
 | **Oliver the Owl** | Wise, calm, gently teaches lessons | Medium barn owl, warm brown/cream feathers, small round wire glasses, dignified posture | Arthur | `30fc8796-ceb6-4a66-b3a7-4a145ef7f346` |
 | **Benny the Bunny** | Shy, kind, braver than he thinks | Small gray rabbit, big cautious eyes, twitchy ears | Chloe | `e9cfbbf0-4476-46be-b396-596eb774b165` |
 | **Bruno the Bear** | Big, warm, always hungry, gentle | Large brown bear, soft rounded shape, warm chuckle | Marcus | `6f98d3dd-324f-4845-8c28-c1d1647a06cd` |
-| **Luna the Wolf** | Protective, steady, quiet leader | Gray wolf, alert but warm posture | Remy | `b9c5c5db-4eb7-468a-a0b7-d06423af0335` |
+| **Luna the Wolf** | Protective, steady, quiet leader | Gray wolf, alert but warm posture | Gia | `530df032-c311-483b-a750-cb3c9e1bcdfd` |
 | **Hazel the Deer** | Graceful, artistic, loves beauty | Tan deer, small antlers, elegant movement | Hana | `c25f78a0-714e-42af-8da3-a399cef94968` |
 | **Milo the Hedgehog** | Anxious, rule-following, secretly brave | Small brown spiky hedgehog | Leo | `73a45c18-0c56-4642-a61e-f6b303f8ded1` |
 | **Pip the Squirrel** | Fast-talking, hyper, always half a step ahead | Red squirrel, quick movements | Zane | `9ddbff06-a984-4c0d-b641-4d8ca846bf60` |
-| **Narrator** | Warm, calm, gentle storyteller — not a character in-world | — | Emily | `6b3e3642-f7b7-4cb8-9688-51e233c4b92f` |
+| **Narrator** | Warm, calm, gentle storyteller — not a character in-world | — | Liza | `1e7feef5-2436-55bd-8778-cb075ecd081e` |
 
 > Note: voices previewed and locked in by Ági on 2026-08-01. These IDs are final and must not change between episodes.
 

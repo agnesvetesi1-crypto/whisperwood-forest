@@ -16,7 +16,7 @@ Each clip below has two parts for the decoupled audio workflow (see concept doc 
 Pixar/Disney 3D animation style. Establishing shot of magical Whisperwood Forest at golden morning hour. Camera glides slowly through tall trees, sunlight streaming through leaves, colorful wildflowers, a sparkling stream, birds and butterflies drifting through the air. Peaceful, warm, inviting atmosphere. No characters yet. Ambient forest sound only, no background music or score. This is Narrator voice-over only — no character is on screen to lip-sync.
 
 **lines:**
-- Narrator (voice: Emily): "Welcome to Whisperwood Forest — a magical place where the sun always finds a way through the leaves, and where eight very good friends call home. Today, we'd like you to meet them all."
+- Narrator (voice: Liza): "Welcome to Whisperwood Forest — a magical place where the sun always finds a way through the leaves, and where eight very good friends call home. Today, we'd like you to meet them all."
 
 ---
 
@@ -26,7 +26,7 @@ Pixar/Disney 3D animation style. Establishing shot of magical Whisperwood Forest
 Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the distance, eight small silhouetted animal figures are visible gathering and waving to each other excitedly under the golden light. Camera slowly pushes forward toward them. Warm, joyful, anticipatory mood. Each of the eight silhouettes appears only once — no duplicate figures. Ambient forest sound only, no background music or score. This is Narrator voice-over only — none of the distant figures' mouths move.
 
 **lines:**
-- Narrator (voice: Emily): "Ready? Let's start with the one who's probably already running toward you."
+- Narrator (voice: Liza): "Ready? Let's start with the one who's probably already running toward you."
 
 ---
 
@@ -196,7 +196,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Luna stands tall and calm at the edge of the clearing, alert posture, gray fur catching the light, scanning the forest protectively before her expression softens and she faces camera, speaking, mouth moving in sync with her words: "I'm Luna. Wolf. I keep an eye on everyone out here." Only Luna's voice plays; her mouth moves only while she speaks these words, no other character is on screen. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style.
 
 **lines:**
-- Luna (voice: Remy): "I'm Luna. Wolf. I keep an eye on everyone out here."
+- Luna (voice: Gia): "I'm Luna. Wolf. I keep an eye on everyone out here."
 
 ---
 
@@ -209,7 +209,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Luna walks calmly along a ridge overlooking the forest, watching over the distant clearing where the other friends are gathered, then turns to camera and speaks, mouth moving in sync with her words: "Not because they need it, exactly. Just because that's what friends do for each other. If you're ever lost in Whisperwood Forest, just call out. I'll hear you." Only Luna's voice plays; her mouth moves only while she speaks these words, no other character is on screen. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style, warm late-afternoon light.
 
 **lines:**
-- Luna (voice: Remy): "Not because they need it, exactly. Just because that's what friends do for each other. If you're ever lost in Whisperwood Forest, just call out. I'll hear you."
+- Luna (voice: Gia): "Not because they need it, exactly. Just because that's what friends do for each other. If you're ever lost in Whisperwood Forest, just call out. I'll hear you."
 
 ---
 
@@ -222,7 +222,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 @Luna's ears perk toward a faint sound in the distance. She turns her head sharply, then relaxes and softens into a small warm smile toward camera, speaking, mouth moving in sync with her words: "Come on. I think you'll like the next one." Only Luna's voice plays; her mouth moves only while she speaks these words, no other character is on screen. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style.
 
 **lines:**
-- Luna (voice: Remy): "Come on. I think you'll like the next one."
+- Luna (voice: Gia): "Come on. I think you'll like the next one."
 
 ---
 
@@ -349,7 +349,7 @@ Pixar/Disney 3D animation style. Wide shot of a sunny forest clearing. In the di
 Wide golden-hour shot: all eight characters — @Coco, @Oliver, @Benny, @Bruno, @Luna, @Hazel, @Milo, @Pip — standing together in the sunny forest clearing, warm and united, looking out at the forest together. Each of the eight characters appears only once in frame, no duplicates. Ambient forest sound only, no background music or score. This is Narrator voice-over only — none of the characters' mouths move. Pixar/Disney 3D animation style, soft warm sunset light.
 
 **lines:**
-- Narrator (voice: Emily): "Eight friends, one magical forest, and more adventures than anyone could count. Some days they'll chase butterflies. Some days they'll get a little lost. But they always find their way — together."
+- Narrator (voice: Liza): "Eight friends, one magical forest, and more adventures than anyone could count. Some days they'll chase butterflies. Some days they'll get a little lost. But they always find their way — together."
 
 ---
 
