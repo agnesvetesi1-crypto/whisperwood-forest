@@ -136,39 +136,39 @@ forest sound only. Pixar/Disney 3D animation style.
 
 ---
 
-### Clip 7 — 1:30–1:45 — Benny finds Milo
+### Clip 7 — 1:30–1:45 — Milo sits with the loss
 
 **video_prompt:**
-@Benny hops over and finds @Milo sitting sadly among the scattered leaves, sitting down
-gently beside him with concern. Pixar/Disney 3D animation style.
+@Milo sits alone among the scattered leaves, picking up a small broken twig and turning
+it over in his paws, quietly upset. Pixar/Disney 3D animation style.
 
 **video_prompt (lip-sync, generate_audio: true):**
-@Benny hops over and finds @Milo sitting sadly among the scattered leaves, sits down
-gently beside him, ears soft with concern, and speaks, mouth moving in sync with his
-words: "Oh, Milo... what happened here?" Milo is present but his mouth does not move in
-this clip. Only Benny's voice plays. No background music or score, ambient forest sound
-only. Pixar/Disney 3D animation style.
+@Milo sits alone among the scattered leaves, picks up a small broken twig and turns it
+over in his paws, and speaks softly to himself, mouth moving in sync with his words: "I
+picked every one of these leaves myself. Found just the right twigs." Only Milo's voice
+plays; his mouth moves only while he speaks these words, no other character is on screen.
+No background music or score, ambient forest sound only. Pixar/Disney 3D animation style.
 
 **lines:**
-- Benny (voice: Chloe): "Oh, Milo... what happened here?"
+- Milo (voice: Leo): "I picked every one of these leaves myself. Found just the right twigs."
 
 ---
 
-### Clip 8 — 1:45–2:00 — Milo explains how he feels
+### Clip 8 — 1:45–2:00 — Milo tries alone, and stops
 
 **video_prompt:**
-@Milo sits beside @Benny, looking at the wreckage with low shoulders, quietly upset.
-Pixar/Disney 3D animation style.
+@Milo starts stacking a couple of leaves back into place, half-hearted, then sets them
+down again, discouraged. Pixar/Disney 3D animation style.
 
 **video_prompt (lip-sync, generate_audio: true):**
-@Milo sits beside @Benny, looking at the wreckage with low shoulders, and speaks softly,
-mouth moving in sync with his words: "I don't know. I worked on it all morning, and now
-it's just... gone." Benny is present but his mouth does not move in this clip. Only
-Milo's voice plays. No background music or score, ambient forest sound only. Pixar/Disney
-3D animation style.
+@Milo starts stacking a couple of leaves back into place, half-hearted, then sets them
+down again, discouraged, and speaks quietly, mouth moving in sync with his words: "It's no
+use starting over all by myself. It won't be the same." Only Milo's voice plays; his mouth
+moves only while he speaks these words, no other character is on screen. No background
+music or score, ambient forest sound only. Pixar/Disney 3D animation style.
 
 **lines:**
-- Milo (voice: Leo): "I don't know. I worked on it all morning, and now it's just... gone."
+- Milo (voice: Leo): "It's no use starting over all by myself. It won't be the same."
 
 ---
 
