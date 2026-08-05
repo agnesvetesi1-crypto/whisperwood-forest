@@ -16,26 +16,26 @@ nothing pending.
 | 6 | Oliver (Arthur) | `eb77ed70-820b-4150-9f61-54398163bdc6` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_214429_eb77ed70-820b-4150-9f61-54398163bdc6.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_213804_60c9c0f0-dfb9-424d-b419-7f834d534a26.wav |
 | 7 | Oliver (Arthur) | `c10552ed-5d69-4dae-bc4c-cc48368becdd` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_215519_c10552ed-5d69-4dae-bc4c-cc48368becdd.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_213805_462b5423-2e96-4e0c-a482-eb8a3824c626.wav |
 | 8 | Oliver (Arthur) | `566762c4-6dcd-4dc5-8668-dcfc60522de9` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_100251_566762c4-6dcd-4dc5-8668-dcfc60522de9.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260801_200236_d6b0d8a9-0c31-4fc9-afd6-e82b7376faf1.wav |
-| 9 | Benny (Chloe) | `86c1168e-340f-4099-8bdb-07d257f5c522` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_102015_86c1168e-340f-4099-8bdb-07d257f5c522.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_203833_27998e22-fb1c-41bd-afb5-8745f95ab5ca.wav |
+| 9 | Benny (Chloe) | `86c1168e-340f-4099-8bdb-07d257f5c522` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_102015_86c1168e-340f-4099-8bdb-07d257f5c522.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_214611_35c9e696-6014-4fba-b510-cd2e2bca04e8.wav |
 | 10 | Benny (Chloe) | `369f2aa4-145c-467b-b513-20df37f38324` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_104543_369f2aa4-145c-467b-b513-20df37f38324.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_213804_71f3f882-0901-481e-92d8-1759b37340f5.wav |
 | 11 | Benny (Chloe) | `bc1b2fba-ef53-444a-8666-8ec045a4409b` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260804_132758_bc1b2fba-ef53-444a-8666-8ec045a4409b.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_204146_1ad0ca8f-5d81-4805-b0c0-b86fd7b74a32.wav |
 | 12 | Bruno (Marcus) | `3d450082-3c6f-4896-92ea-90d6b8b6777e` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_111121_3d450082-3c6f-4896-92ea-90d6b8b6777e.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260801_200328_1900d5ef-51c2-4a9e-b142-26e3119cc1e9.wav |
-| 13 | Bruno (Marcus) | `f9075fa1-6ed9-45b1-b640-90685879ef34` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_113906_f9075fa1-6ed9-45b1-b640-90685879ef34.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260801_200734_2f7a400e-eb81-49fb-ae1b-8ddda07c9176.wav |
+| 13 | Bruno (Marcus) | `f9075fa1-6ed9-45b1-b640-90685879ef34` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_113906_f9075fa1-6ed9-45b1-b640-90685879ef34.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_214610_c1289f12-9d13-4fb4-a1a1-a45df74c910a.wav |
 | 14 | Bruno (Marcus) + Benny (Chloe) | `ec279a17-a30c-4d64-bb39-3dbdbfe18d87` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_114835_ec279a17-a30c-4d64-bb39-3dbdbfe18d87.mp4 | Bruno: https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260801_200742_e4e855ff-4491-4b97-beaf-b2ec1863469f.wav · Benny: https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_204204_850c3135-25fd-4b39-bd2d-c80bf50fa2ef.wav |
 | 15 | Luna (Gia) | `98cbd345-b79f-468d-ac80-1ff4ecbd51b7` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_121357_98cbd345-b79f-468d-ac80-1ff4ecbd51b7.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_081624_18ad22fa-1146-4a7b-8604-f63b0eebfbc1.wav |
 | 16 | Luna (Gia) | `3b0639d9-8cc8-4de3-bd45-d3a67c2b2334` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_123744_3b0639d9-8cc8-4de3-bd45-d3a67c2b2334.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_081630_bf0fa906-d6c2-4678-a8ce-2b1e927009e9.wav |
-| 17 | Luna (Gia) | `8155c021-b5cf-428a-8ce3-2e39ecbe493a` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_145231_8155c021-b5cf-428a-8ce3-2e39ecbe493a.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_081638_db5cdc44-e295-40f9-b15f-253a2c4f0349.wav |
-| 18 | Hazel (Hana) | `16cb6328-0322-437c-b042-8cfc0493c679` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_150546_16cb6328-0322-437c-b042-8cfc0493c679.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_205044_8c9a57f9-8dcd-4fcf-9e01-66affc0137f6.wav |
+| 17 | Luna (Gia) | `8155c021-b5cf-428a-8ce3-2e39ecbe493a` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_145231_8155c021-b5cf-428a-8ce3-2e39ecbe493a.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_214610_f4970653-42d0-445b-a098-95d918af2d27.wav |
+| 18 | Hazel (Hana) | `16cb6328-0322-437c-b042-8cfc0493c679` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_150546_16cb6328-0322-437c-b042-8cfc0493c679.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_214611_9ef45799-5bdc-49c9-991e-e2ac0ab547d8.wav |
 | 19 | Hazel (Hana) | `e5c51a50-6f41-42fe-aca5-f1e6a385d3b3` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_155556_e5c51a50-6f41-42fe-aca5-f1e6a385d3b3.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_205115_992b061f-a578-48d8-b32c-09ee7c45256e.wav |
 | 20 | Hazel (Hana) | `8217bc2c-130c-409f-b2c7-5647ccef0816` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_181354_8217bc2c-130c-409f-b2c7-5647ccef0816.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_205130_238c1231-20b2-41d9-9a51-c57054150ff7.wav |
 | 21 | Milo (Leo) | `4a1fdec1-761e-4035-931a-c9f214f9b51f` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_182530_4a1fdec1-761e-4035-931a-c9f214f9b51f.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260804_201215_b11c15e1-962f-4447-b1aa-14fd084261b2.wav |
-| 22 | Milo (Leo) | `f18b4d13-005a-416b-ab35-1e0add8c59c4` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_190447_f18b4d13-005a-416b-ab35-1e0add8c59c4.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260804_201220_433c14f5-151d-4ec7-83dd-0fa74067b2c5.wav |
+| 22 | Milo (Leo) | `f18b4d13-005a-416b-ab35-1e0add8c59c4` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_190447_f18b4d13-005a-416b-ab35-1e0add8c59c4.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_214611_b3991a3c-a689-4877-b5d3-0db0f4b29448.wav |
 | 23 | Milo (Leo) | `c311daa9-c4a8-4275-a09f-d9f0b35d5355` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_192618_c311daa9-c4a8-4275-a09f-d9f0b35d5355.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260804_201225_e8573929-b3e8-4f93-98f6-f93d5799c5e8.wav |
 | 24 | Pip (Zane) | `6fbceade-413c-4c10-89a2-35536eaa5574` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_200706_6fbceade-413c-4c10-89a2-35536eaa5574.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260804_201233_5170743b-3ed7-48b2-8eea-2ecd652b4a0d.wav |
 | 25 | Pip (Zane) | `21575448-f721-4954-bed2-f43e0c512d31` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_201718_21575448-f721-4954-bed2-f43e0c512d31.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260804_201238_7a82d38b-6af7-458b-bffd-7387f0bbefbf.wav |
 | 26 | Pip (Zane) | `ca8e4d59-2df9-48a2-b6da-999ff3d26cbc` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260804_143812_ca8e4d59-2df9-48a2-b6da-999ff3d26cbc.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260804_201242_b39ee1c6-3d9f-4e34-a152-b05016a5401d.wav |
 | 27 | Group (all 8) | `8f65654c-5a39-4f99-a04f-5be4f7a2ff64` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_215925_8f65654c-5a39-4f99-a04f-5be4f7a2ff64.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_081617_c01fa6be-9e14-44a3-b522-3f61b5f0132d.wav |
-| 28 | Coco (outro, Simone) | `33e48c06-e787-4f90-8d53-61bdf4cbb82b` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260804_081047_33e48c06-e787-4f90-8d53-61bdf4cbb82b.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_203825_8dee8416-3b2f-40ae-9d10-639a2251dd4d.wav |
+| 28 | Coco (outro, Simone) | `33e48c06-e787-4f90-8d53-61bdf4cbb82b` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260804_081047_33e48c06-e787-4f90-8d53-61bdf4cbb82b.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_214928_cfa7fa5b-52e4-40a4-8c65-5185abb17a3c.wav |
 
 ## Music bed
 
@@ -89,9 +89,36 @@ Found and fixed two separate problems flagged by Ági:
    All four regenerated with a higher `speech_rate` on the same locked voice_id — same
    voice, faster/more natural pacing. Rebuilt the zip in place, same folder structure and
    filenames, only these 4 files (plus the corrupted one) replaced.
+   ~~https://d2ol7oe51mr4n9.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/25b8794b-a6e2-4e01-bf5c-b57c3205a0b3.zip~~
+   (superseded — see full-audit pass below)
+
+### Full audio audit, all 28 clips (2026-08-05)
+
+Per Ági's request, checked every dialogue/narration file's duration and integrity against
+its 15s video clip (`ffprobe` + `unzip -t` on every file in the zip — no other corruption
+found beyond the clip 7 fix above). Words-per-second was calculated per line; most clips
+sit naturally under 15s (that's expected, dialogue rarely needs the full clip) and were
+left untouched. Six more lines were dragging noticeably below natural pace and got
+regenerated with a faster `speech_rate`, same locked voice:
+
+| Clip | Character | Before | After |
+|---|---|---|---|
+| 9 | Benny | 11.8s (~1.5 words/sec) | 8.2s |
+| 13 | Bruno | 10.4s (~1.8 words/sec) | 8.8s |
+| 17 | Luna | 6.1s (~1.5 words/sec) | 2.9s |
+| 18 | Hazel | 5.4s (~1.7 words/sec) | 3.0s |
+| 22 | Milo | 10.2s (~1.8 words/sec) | 8.2s |
+| 28 | Coco (outro) | 12.3s (~1.6 words/sec) | 5.95s |
+
+(Clip 28 needed two passes — the first retry overshot to ~4.2 words/sec, too rushed for
+the outro line; dialed back to a middle `speech_rate` for a natural energetic pace.)
+
+Combined with the 4 clips fixed in the previous pass, that's 10 of 28 dialogue/narration
+lines re-paced in total. Rebuilt the zip once more, same structure, only these files
+touched.
 
 Fresh zip:
-https://d2ol7oe51mr4n9.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/25b8794b-a6e2-4e01-bf5c-b57c3205a0b3.zip
+https://d2ol7oe51mr4n9.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/b55ae6bf-37bf-43b3-aab4-cbcc8c836ae8.zip
 
 ## Assembly
 
