@@ -11,13 +11,13 @@ nothing pending.
 | 1 | Narrator | `887bdcc6-32c8-41fd-b548-98887db0cf48` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260804_094035_887bdcc6-32c8-41fd-b548-98887db0cf48.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_081410_848f3065-f28c-47e7-bb61-0ffadb437fb0.wav |
 | 2 | Narrator | `8ea54fa5-fbe9-45c0-91d0-8d4e89c0303f` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260804_130009_8ea54fa5-fbe9-45c0-91d0-8d4e89c0303f.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_081610_fb8495e3-b10a-487d-a4c8-3fdb86b3e0da.wav |
 | 3 | Coco (Simone) | `7466a8a7-5b72-4774-bf60-6db4a0e8f540` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_195537_7466a8a7-5b72-4774-bf60-6db4a0e8f540.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260801_215023_8103a4a0-b394-4ed7-8f69-6cad2d501e14.wav |
-| 4 | Coco (Simone) | `671b0335-1bc4-4ad6-ab99-52e56565cbb3` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_212214_671b0335-1bc4-4ad6-ab99-52e56565cbb3.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_201644_8331cf73-3106-4a07-a278-8af24be322da.wav |
+| 4 | Coco (Simone) | `671b0335-1bc4-4ad6-ab99-52e56565cbb3` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_212214_671b0335-1bc4-4ad6-ab99-52e56565cbb3.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_213804_432014ce-9046-4139-9a7e-97397ad5ae1f.wav |
 | 5 | Coco (Simone) | `34407d2e-decf-424d-95b7-d42724b40052` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_213622_34407d2e-decf-424d-95b7-d42724b40052.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_203813_80168bff-400e-4387-b4f3-f384c768ddec.wav |
-| 6 | Oliver (Arthur) | `eb77ed70-820b-4150-9f61-54398163bdc6` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_214429_eb77ed70-820b-4150-9f61-54398163bdc6.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260801_195458_49031671-1871-4d7b-ae4f-650e72a87121.wav |
-| 7 | Oliver (Arthur) | `c10552ed-5d69-4dae-bc4c-cc48368becdd` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_215519_c10552ed-5d69-4dae-bc4c-cc48368becdd.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260801_195729_5c6d1fa2-3556-45ec-8968-f83e826f1ff9.wav |
+| 6 | Oliver (Arthur) | `eb77ed70-820b-4150-9f61-54398163bdc6` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_214429_eb77ed70-820b-4150-9f61-54398163bdc6.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_213804_60c9c0f0-dfb9-424d-b419-7f834d534a26.wav |
+| 7 | Oliver (Arthur) | `c10552ed-5d69-4dae-bc4c-cc48368becdd` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_215519_c10552ed-5d69-4dae-bc4c-cc48368becdd.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_213805_462b5423-2e96-4e0c-a482-eb8a3824c626.wav |
 | 8 | Oliver (Arthur) | `566762c4-6dcd-4dc5-8668-dcfc60522de9` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_100251_566762c4-6dcd-4dc5-8668-dcfc60522de9.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260801_200236_d6b0d8a9-0c31-4fc9-afd6-e82b7376faf1.wav |
 | 9 | Benny (Chloe) | `86c1168e-340f-4099-8bdb-07d257f5c522` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_102015_86c1168e-340f-4099-8bdb-07d257f5c522.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_203833_27998e22-fb1c-41bd-afb5-8745f95ab5ca.wav |
-| 10 | Benny (Chloe) | `369f2aa4-145c-467b-b513-20df37f38324` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_104543_369f2aa4-145c-467b-b513-20df37f38324.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_203843_397faf96-b666-4b98-b08d-3dd699a97c6f.wav |
+| 10 | Benny (Chloe) | `369f2aa4-145c-467b-b513-20df37f38324` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_104543_369f2aa4-145c-467b-b513-20df37f38324.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_213804_71f3f882-0901-481e-92d8-1759b37340f5.wav |
 | 11 | Benny (Chloe) | `bc1b2fba-ef53-444a-8666-8ec045a4409b` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260804_132758_bc1b2fba-ef53-444a-8666-8ec045a4409b.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260802_204146_1ad0ca8f-5d81-4805-b0c0-b86fd7b74a32.wav |
 | 12 | Bruno (Marcus) | `3d450082-3c6f-4896-92ea-90d6b8b6777e` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_111121_3d450082-3c6f-4896-92ea-90d6b8b6777e.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260801_200328_1900d5ef-51c2-4a9e-b142-26e3119cc1e9.wav |
 | 13 | Bruno (Marcus) | `f9075fa1-6ed9-45b1-b640-90685879ef34` | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260803_113906_f9075fa1-6ed9-45b1-b640-90685879ef34.mp4 | https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260801_200734_2f7a400e-eb81-49fb-ae1b-8ddda07c9176.wav |
@@ -54,7 +54,7 @@ lip-sync control. Delivered:
   own file named `klipNN_Character.wav`, the 3 music mood sections plus one already
   crossfaded into a continuous ~7min bed):
   ~~https://d2ol7oe51mr4n9.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/cd5fb4c4-9fcd-48b2-8166-727e5cdbc2d6.zip~~
-  (superseded — see voice update below)
+  (superseded — see updates below)
 
 ### Voice update (2026-08-05)
 
@@ -62,8 +62,36 @@ Narrator re-locked from Emily → **Liza**, Luna re-locked from Remy → **Gia**
 `production-bible.md`). Regenerated the 6 affected lines (clips 1, 2, 27 — Narrator; clips
 15, 16, 17 — Luna) with the new locked voice_ids and rebuilt the zip in place, same folder
 structure and filenames as before (`Narracio/klip01_Narrator.wav` etc.), only those 6 files
-replaced. Fresh zip:
-https://d2ol7oe51mr4n9.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/732c0a91-ecc1-4930-8e00-9b2a23b52d3c.zip
+replaced.
+~~https://d2ol7oe51mr4n9.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/732c0a91-ecc1-4930-8e00-9b2a23b52d3c.zip~~
+(superseded — see sync fix below)
+
+### Audio-sync fix (2026-08-05)
+
+Found and fixed two separate problems flagged by Ági:
+
+1. **`klip07_Oliver.wav` was corrupted in the zip** — it was actually a 111-byte S3
+   `AccessDenied` error page saved as a `.wav`, left over from a transient CDN glitch during
+   the original zip build on 2026-08-04. The underlying Higgsfield generation was fine; the
+   zip just had the wrong bytes for that one file. Fixed by re-fetching/regenerating clean.
+2. **Uneven TTS pacing vs. the 15s video clips** — `seed_audio` speeds up or slows down
+   noticeably between takes even for the same voice, and a few lines drifted well off a
+   natural speaking pace, most noticeably Oliver's. Audio duration doesn't need to fill the
+   full 15s (that's normal and expected — dialogue is often shorter than the clip), but
+   these four were dragging enough to look/sound out of step with the video's mouth timing,
+   and two of them literally ran longer than the 15s clip itself:
+   - Clip 4 (Coco): 16.0s → regenerated at **13.7s** (was longer than the video)
+   - Clip 6 (Oliver): 13.1s → regenerated at **11.4s**
+   - Clip 7 (Oliver): 14.4s at an unnaturally slow ~1.9 words/sec → regenerated at
+     **9.4s**, ~2.9 words/sec, in line with his other lines
+   - Clip 10 (Benny): 15.6s → regenerated at **9.2s** (was longer than the video)
+
+   All four regenerated with a higher `speech_rate` on the same locked voice_id — same
+   voice, faster/more natural pacing. Rebuilt the zip in place, same folder structure and
+   filenames, only these 4 files (plus the corrupted one) replaced.
+
+Fresh zip:
+https://d2ol7oe51mr4n9.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/25b8794b-a6e2-4e01-bf5c-b57c3205a0b3.zip
 
 ## Assembly
 
