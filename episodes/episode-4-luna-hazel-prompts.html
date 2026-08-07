@@ -255,6 +255,22 @@
     border: 1px solid var(--line);
     border-radius: 4px;
     margin-bottom: 0.7rem;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+
+  .prompt-block:hover {
+    border-color: var(--dusk);
+  }
+
+  .prompt-block:focus-visible {
+    outline: 2px solid var(--dusk);
+    outline-offset: 2px;
+  }
+
+  .prompt-block.copied {
+    background: color-mix(in srgb, var(--moss) 12%, var(--surface-mono));
+    border-color: var(--moss);
   }
 
   .prompt-block.lipsync {
@@ -262,7 +278,8 @@
   }
 
   .prompt-label {
-    display: block;
+    display: flex;
+    align-items: center;
     font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
     font-size: 0.72rem;
     letter-spacing: 0.04em;
@@ -272,6 +289,34 @@
 
   .prompt-label .tag {
     color: var(--gold);
+  }
+
+  .prompt-label::after,
+  .line::after {
+    content: "copy";
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.03em;
+    color: var(--ink-soft);
+    opacity: 0.4;
+    margin-left: auto;
+    padding-left: 0.75rem;
+    flex-shrink: 0;
+    transition: opacity 0.15s ease, color 0.15s ease;
+  }
+
+  .prompt-block:hover .prompt-label::after,
+  .prompt-block:focus-visible .prompt-label::after,
+  .line:hover::after,
+  .line:focus-visible::after {
+    opacity: 0.9;
+  }
+
+  .prompt-block.copied .prompt-label::after,
+  .line.copied::after {
+    content: "copied";
+    color: var(--moss);
+    opacity: 1;
   }
 
   .prompt-block p {
@@ -298,11 +343,30 @@
 
   .line {
     margin: 0;
+    padding: 0.25rem 0.4rem;
+    margin-left: -0.4rem;
+    margin-right: -0.4rem;
+    border-radius: 4px;
     font-size: 0.98rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
     align-items: baseline;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  .line:hover {
+    background: var(--surface);
+  }
+
+  .line:focus-visible {
+    outline: 2px solid var(--dusk);
+    outline-offset: 2px;
+  }
+
+  .line.copied {
+    background: color-mix(in srgb, var(--moss) 12%, var(--surface));
   }
 
   .speaker {
@@ -734,3 +798,73 @@
   </footer>
 
 </div>
+
+<script>
+  (function () {
+    var sequence = document.querySelector('.sequence');
+    if (!sequence) return;
+
+    function legacyCopy(text) {
+      return new Promise(function (resolve) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+        resolve();
+      });
+    }
+
+    function copyText(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(text).catch(function () {
+          return legacyCopy(text);
+        });
+      }
+      return legacyCopy(text);
+    }
+
+    var items = sequence.querySelectorAll('.prompt-block, .line');
+    items.forEach(function (el) {
+      el.tabIndex = 0;
+      el.setAttribute('role', 'button');
+      el.setAttribute(
+        'aria-label',
+        el.classList.contains('line') ? 'Copy line to clipboard' : 'Copy prompt to clipboard'
+      );
+    });
+
+    function activate(el) {
+      var source = el.matches('.prompt-block') ? el.querySelector('p') : el.querySelector('q');
+      if (!source) return;
+      var text = source.textContent.trim();
+      if (!text) return;
+      copyText(text).then(function () {
+        el.classList.add('copied');
+        var prevLabel = el.getAttribute('aria-label');
+        el.setAttribute('aria-label', 'Copied to clipboard');
+        clearTimeout(el._copyTimer);
+        el._copyTimer = setTimeout(function () {
+          el.classList.remove('copied');
+          el.setAttribute('aria-label', prevLabel);
+        }, 1400);
+      });
+    }
+
+    sequence.addEventListener('click', function (e) {
+      var target = e.target.closest('.prompt-block, .line');
+      if (target) activate(target);
+    });
+
+    sequence.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      var target = e.target.closest('.prompt-block, .line');
+      if (!target) return;
+      e.preventDefault();
+      activate(target);
+    });
+  })();
+</script>
