@@ -1,0 +1,736 @@
+<style>
+  :root {
+    --paper: #f6f0e2;
+    --surface: #fffdf8;
+    --surface-mono: #efe7d2;
+    --ink: #2a251d;
+    --ink-soft: #6b6350;
+    --line: #e0d6be;
+    --moss: #4f6338;
+    --dusk: #46527a;
+    --gold: #a86a25;
+    --shadow: 0 1px 0 rgba(42,37,29,0.05);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #1c1912;
+      --surface: #242017;
+      --surface-mono: #2c2718;
+      --ink: #f3ecda;
+      --ink-soft: #c2b79e;
+      --line: #3b3424;
+      --moss: #92ac66;
+      --dusk: #93a0d6;
+      --gold: #e3a758;
+      --shadow: 0 1px 0 rgba(0,0,0,0.2);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #1c1912;
+    --surface: #242017;
+    --surface-mono: #2c2718;
+    --ink: #f3ecda;
+    --ink-soft: #c2b79e;
+    --line: #3b3424;
+    --moss: #92ac66;
+    --dusk: #93a0d6;
+    --gold: #e3a758;
+    --shadow: 0 1px 0 rgba(0,0,0,0.2);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    margin: 0;
+    font-family: Optima, "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.55;
+  }
+
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  h1, h2, h3 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-weight: 600;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  .eyebrow {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Masthead ---------- */
+
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding-bottom: 2.25rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .masthead h1 {
+    font-size: clamp(2rem, 5.5vw, 2.85rem);
+    line-height: 1.08;
+  }
+
+  .masthead .subtitle {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1.1rem;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin-top: 0.4rem;
+  }
+
+  .meta-row span:not(:last-child)::after {
+    content: "·";
+    margin-left: 1rem;
+    color: var(--line);
+  }
+
+  /* ---------- Premise ---------- */
+
+  .premise {
+    padding: 2.25rem 0;
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    gap: 1.1rem;
+  }
+
+  .premise p {
+    margin: 0;
+    max-width: 62ch;
+    font-size: 1.03rem;
+  }
+
+  .lesson {
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--gold);
+  }
+
+  .lesson .eyebrow { color: var(--gold); }
+
+  .lesson p {
+    font-style: italic;
+    color: var(--ink);
+    font-size: 1.02rem;
+  }
+
+  /* ---------- Cast ---------- */
+
+  .cast {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .cast-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.5rem 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    background: var(--surface);
+    font-size: 0.88rem;
+  }
+
+  .cast-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .cast-chip .name { font-weight: 600; }
+  .cast-chip .voice {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+  }
+
+  .luna-dot { background: var(--dusk); }
+  .hazel-dot { background: var(--moss); }
+  .narrator-dot { background: var(--gold); }
+
+  /* ---------- Production notes ---------- */
+
+  .notes {
+    margin: 1.75rem 0 0;
+    padding: 1.25rem 1.4rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .notes .eyebrow { margin-bottom: 0.15rem; display: block; }
+
+  .notes p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+
+  .notes strong { color: var(--ink); }
+
+  /* ---------- Sequence ---------- */
+
+  .sequence {
+    list-style: none;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 2.25rem;
+  }
+
+  .clip {
+    padding-top: 2.25rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .clip:first-child { padding-top: 0; border-top: none; }
+
+  .clip-head {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .clip-num {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 1.6rem;
+    color: var(--ink-soft);
+    opacity: 0.55;
+  }
+
+  .clip-time {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    align-self: center;
+  }
+
+  .clip-title {
+    font-size: 1.2rem;
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: 480px) {
+    .clip-title { grid-column: auto; }
+  }
+
+  .prompt-block {
+    padding: 0.9rem 1.1rem;
+    background: var(--surface-mono);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    margin-bottom: 0.7rem;
+  }
+
+  .prompt-block.lipsync {
+    border-left: 3px solid var(--gold);
+  }
+
+  .prompt-label {
+    display: block;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    margin-bottom: 0.5rem;
+  }
+
+  .prompt-label .tag {
+    color: var(--gold);
+  }
+
+  .prompt-block p {
+    margin: 0;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.84rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+
+  .lines {
+    padding-top: 0.3rem;
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .lines-label {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    margin-bottom: 0.15rem;
+  }
+
+  .line {
+    margin: 0;
+    font-size: 0.98rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: baseline;
+  }
+
+  .speaker {
+    font-weight: 700;
+  }
+
+  .speaker.luna { color: var(--dusk); }
+  .speaker.hazel { color: var(--moss); }
+  .speaker.narrator { color: var(--gold); }
+
+  .voice-tag {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+  }
+
+  .line q {
+    quotes: "\201C" "\201D";
+    font-style: italic;
+  }
+
+  /* ---------- Music arc ---------- */
+
+  .music-arc {
+    margin-top: 3rem;
+    padding-top: 2.25rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .music-arc h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .music-arc > p {
+    margin: 0 0 1.25rem;
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    max-width: 62ch;
+  }
+
+  .beats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 0;
+    align-items: stretch;
+  }
+
+  .beat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 4px;
+    min-width: 8.5rem;
+    flex: 1 1 8.5rem;
+  }
+
+  .beat + .beat { margin-left: -1px; }
+
+  .beat .range {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    color: var(--ink-soft);
+  }
+
+  .beat .mood {
+    font-size: 0.85rem;
+  }
+
+  /* ---------- Colophon ---------- */
+
+  .colophon {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+
+  a { color: var(--dusk); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .masthead { animation: rise 0.5s ease-out; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+</style>
+
+<div class="page">
+
+  <header class="masthead">
+    <span class="eyebrow">Whisperwood Forest &middot; Episode 4</span>
+    <h1>Luna sosem áll meg <span style="color: var(--ink-soft); font-weight: 400;">/ Luna Never Stops</span></h1>
+    <p class="subtitle">A hűséges őrszem megtanulja, hogy őt is lehet néha körülvenni.</p>
+    <div class="meta-row">
+      <span>14 clips</span>
+      <span>15s each</span>
+      <span>~3:30 total</span>
+      <span>Seedance 2.0</span>
+      <span>16:9</span>
+    </div>
+  </header>
+
+  <section class="premise">
+    <div>
+      <span class="eyebrow">Story</span>
+      <p>Luna always keeps watch over the group — steady, alert, standing a little apart from the fun. Hazel notices that Luna never joins in, never rests. Instead of arguing with her about it, Hazel quietly makes her a flower crown and asks her to just sit for five minutes and let someone else do the watching for once.</p>
+    </div>
+    <div class="lesson">
+      <div>
+        <span class="eyebrow">Lesson</span>
+        <p>Whoever always looks after everyone else deserves to be looked after too.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cast">
+    <div class="cast-chip"><span class="cast-dot luna-dot"></span><span class="name">Luna</span><span class="voice">voice: Gia</span></div>
+    <div class="cast-chip"><span class="cast-dot hazel-dot"></span><span class="name">Hazel</span><span class="voice">voice: Hana</span></div>
+    <div class="cast-chip"><span class="cast-dot narrator-dot"></span><span class="name">Narrator</span><span class="voice">voice: Liza</span></div>
+  </section>
+
+  <aside class="notes">
+    <div>
+      <span class="eyebrow">Decoupled audio workflow</span>
+      <p>Each clip below has two parts (see concept doc §3): <strong>video_prompt</strong> → <code>generate_video</code> (Seedance&nbsp;2.0, 15s, visuals + ambient sfx only). <strong>lines</strong> → <code>generate_audio</code> separately, one call per speaker, using the locked voice_id from the character table.</p>
+    </div>
+    <div>
+      <span class="eyebrow">Lip-sync fix</span>
+      <p>For any clip where a character speaks directly to camera, use the <strong>video_prompt (lip-sync)</strong> version instead of the plain one — it has the actual dialogue baked into the prompt so the mouth movement matches the words. Set <strong>generate_audio: true</strong> on these. Don't upload the locked-voice line as an audio reference — the correct voice gets layered in at final assembly, native ambience stays underneath. No duplicate characters in frame; when two characters share a clip, only the speaking one's mouth moves, the other stays silent.</p>
+    </div>
+    <div>
+      <span class="eyebrow">Narrator-only clips (1, 2, 7, 13)</span>
+      <p>Get a pure scene description in <code>video_prompt</code> — no mention of narration, voice-over, or speech at all, not even a line like "no character speaks on camera." Any reference to narration or speech in the prompt, even to say there isn't any, makes Seedance invent its own random spoken audio for the clip. Just describe what's on screen; the narrator line only ever goes in the <code>lines</code> section below, generated separately.</p>
+    </div>
+  </aside>
+
+  <ol class="sequence">
+
+    <li class="clip" id="clip-1">
+      <div class="clip-head">
+        <span class="clip-num">01</span>
+        <span class="clip-time">0:00–0:15</span>
+        <h3 class="clip-title">Cold open, forest establishing shot</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>Pixar/Disney 3D animation style. Establishing shot of Whisperwood Forest in warm late-afternoon light. Camera drifts toward a lively clearing in the distance — faint sounds of laughter and playful chatter drift on the breeze, wildflowers swaying. Warm, joyful, everyday mood. No characters visible yet. Ambient forest sound and distant laughter only, no background music or score.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker narrator">Narrator</span><span class="voice-tag">Liza</span><q>Some afternoons in Whisperwood Forest are just for playing. But even on the happiest days... someone is always keeping watch.</q></p>
+      </div>
+    </li>
+
+    <li class="clip" id="clip-2">
+      <div class="clip-head">
+        <span class="clip-num">02</span>
+        <span class="clip-time">0:15–0:30</span>
+        <h3 class="clip-title">Luna at the tree line</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>@Luna stands at the edge of a sunlit clearing, alert and still, ears turned outward toward the forest rather than toward the clearing behind her. Behind her, soft out-of-focus movement and color hints at friends laughing and playing in the meadow. Luna's posture is steady, watchful, apart from the fun. Pixar/Disney 3D animation style, warm afternoon light.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker narrator">Narrator</span><span class="voice-tag">Liza</span><q>Luna always stood a little apart. Watching the paths. Listening to the wind. Just in case.</q></p>
+      </div>
+    </li>
+
+    <li class="clip" id="clip-3">
+      <div class="clip-head">
+        <span class="clip-num">03</span>
+        <span class="clip-time">0:30–0:45</span>
+        <h3 class="clip-title">Hazel notices</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>@Hazel pauses mid-step in the sunny clearing, a half-finished flower crown in her hooves, glancing back over her shoulder toward Luna at the tree line, head tilted thoughtfully. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="prompt-block lipsync">
+        <span class="prompt-label">video_prompt <span class="tag">· lip-sync, generate_audio: true</span></span>
+        <p>@Hazel pauses mid-step in the sunny clearing, a half-finished flower crown in her hooves, and glances back over her shoulder at @Luna standing alone at the tree line. Hazel tilts her head thoughtfully, speaking softly to herself, mouth moving in sync with her words: "She's not dancing again. She never dances." Only Hazel's voice plays; her mouth moves only while she speaks these words, no other character is on screen. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker hazel">Hazel</span><span class="voice-tag">Hana</span><q>She's not dancing again. She never dances.</q></p>
+      </div>
+    </li>
+
+    <li class="clip" id="clip-4">
+      <div class="clip-head">
+        <span class="clip-num">04</span>
+        <span class="clip-time">0:45–1:00</span>
+        <h3 class="clip-title">Hazel comes over</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>@Hazel crosses the clearing and comes to stand beside @Luna at the tree line, offering a warm, gentle smile. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="prompt-block lipsync">
+        <span class="prompt-label">video_prompt <span class="tag">· lip-sync, generate_audio: true</span></span>
+        <p>@Hazel crosses the clearing and comes to stand beside @Luna at the tree line, offering a warm, gentle smile, speaking, mouth moving in sync with her words: "Come dance with us, Luna. Just for a little while?" Luna's mouth then moves as she glances at Hazel, then back out at the forest, replying, mouth moving in sync with her words: "Someone has to keep watch, Hazel. That's just... what I do." Only whoever is speaking has their mouth move; the other listens with mouth closed. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker hazel">Hazel</span><span class="voice-tag">Hana</span><q>Come dance with us, Luna. Just for a little while?</q></p>
+        <p class="line"><span class="speaker luna">Luna</span><span class="voice-tag">Gia</span><q>Someone has to keep watch, Hazel. That's just... what I do.</q></p>
+      </div>
+    </li>
+
+    <li class="clip" id="clip-5">
+      <div class="clip-head">
+        <span class="clip-num">05</span>
+        <span class="clip-time">1:00–1:15</span>
+        <h3 class="clip-title">Hazel presses gently</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>@Hazel studies @Luna's face for a moment, gentle and curious. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="prompt-block lipsync">
+        <span class="prompt-label">video_prompt <span class="tag">· lip-sync, generate_audio: true</span></span>
+        <p>@Hazel studies @Luna's face for a moment, gentle and curious, then speaks quietly, mouth moving in sync with her words: "But who keeps watch over you?" Luna blinks, caught off guard, her mouth staying still, clearly not having an answer. Only Hazel's voice plays. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker hazel">Hazel</span><span class="voice-tag">Hana</span><q>But who keeps watch over you?</q></p>
+      </div>
+    </li>
+
+    <li class="clip" id="clip-6">
+      <div class="clip-head">
+        <span class="clip-num">06</span>
+        <span class="clip-time">1:15–1:30</span>
+        <h3 class="clip-title">Luna deflects</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>@Luna looks away, a little uncomfortable, then turns her gaze firmly back out toward the trees. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="prompt-block lipsync">
+        <span class="prompt-label">video_prompt <span class="tag">· lip-sync, generate_audio: true</span></span>
+        <p>@Luna looks away, a little uncomfortable, then speaks, mouth moving in sync with her words: "I don't need watching. I'm fine right here." She turns her gaze firmly back out toward the trees. Only Luna's voice plays; her mouth moves only while she speaks these words, no other character is on screen. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker luna">Luna</span><span class="voice-tag">Gia</span><q>I don't need watching. I'm fine right here.</q></p>
+      </div>
+    </li>
+
+    <li class="clip" id="clip-7">
+      <div class="clip-head">
+        <span class="clip-num">07</span>
+        <span class="clip-time">1:30–1:45</span>
+        <h3 class="clip-title">Hazel quietly makes something</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>Pixar/Disney 3D animation style. @Hazel sits a little apart, carefully weaving wildflowers and soft leaves together into a small crown, glancing occasionally toward Luna with a thoughtful, fond expression. Warm, patient mood. Ambient forest sound only, no background music or score.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker narrator">Narrator</span><span class="voice-tag">Liza</span><q>So Hazel didn't argue. She just... started making something.</q></p>
+      </div>
+    </li>
+
+    <li class="clip" id="clip-8">
+      <div class="clip-head">
+        <span class="clip-num">08</span>
+        <span class="clip-time">1:45–2:00</span>
+        <h3 class="clip-title">The flower crown</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>@Hazel walks back to @Luna and gently places a delicate flower crown over her ears, stepping back to admire it. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="prompt-block lipsync">
+        <span class="prompt-label">video_prompt <span class="tag">· lip-sync, generate_audio: true</span></span>
+        <p>@Hazel walks back to @Luna and gently places a delicate flower crown over her ears, stepping back to admire it, speaking warmly, mouth moving in sync with her words: "There. Now you sit, and let me watch for a while. Just for five minutes." Only Hazel's voice plays; her mouth moves only while she speaks these words, no other character is on screen. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker hazel">Hazel</span><span class="voice-tag">Hana</span><q>There. Now you sit, and let me watch for a while. Just for five minutes.</q></p>
+      </div>
+    </li>
+
+    <li class="clip" id="clip-9">
+      <div class="clip-head">
+        <span class="clip-num">09</span>
+        <span class="clip-time">2:00–2:15</span>
+        <h3 class="clip-title">Luna hesitates</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>@Luna touches the flower crown gently with one paw, unsure, glancing between the crown and the forest. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="prompt-block lipsync">
+        <span class="prompt-label">video_prompt <span class="tag">· lip-sync, generate_audio: true</span></span>
+        <p>@Luna touches the flower crown gently with one paw, unsure, glancing between the crown and the forest, speaking, mouth moving in sync with her words: "I don't know how to just... sit." Only Luna's voice plays; her mouth moves only while she speaks these words, no other character is on screen. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker luna">Luna</span><span class="voice-tag">Gia</span><q>I don't know how to just... sit.</q></p>
+      </div>
+    </li>
+
+    <li class="clip" id="clip-10">
+      <div class="clip-head">
+        <span class="clip-num">10</span>
+        <span class="clip-time">2:15–2:30</span>
+        <h3 class="clip-title">Hazel reassures her</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>@Hazel sits down beside @Luna, settling in close. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="prompt-block lipsync">
+        <span class="prompt-label">video_prompt <span class="tag">· lip-sync, generate_audio: true</span></span>
+        <p>@Hazel sits down beside @Luna, settling in close, speaking gently, mouth moving in sync with her words: "Then just sit badly. Nothing's going to happen in five minutes, Luna. I promise." Luna's mouth stays still as she looks at Hazel, a small uncertain smile forming. Only Hazel's voice plays. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker hazel">Hazel</span><span class="voice-tag">Hana</span><q>Then just sit badly. Nothing's going to happen in five minutes, Luna. I promise.</q></p>
+      </div>
+    </li>
+
+    <li class="clip" id="clip-11">
+      <div class="clip-head">
+        <span class="clip-num">11</span>
+        <span class="clip-time">2:30–2:45</span>
+        <h3 class="clip-title">Luna admits it's hard</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>@Luna slowly lowers herself down onto the soft grass beside @Hazel, shoulders loosening for the first time. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="prompt-block lipsync">
+        <span class="prompt-label">video_prompt <span class="tag">· lip-sync, generate_audio: true</span></span>
+        <p>@Luna slowly lowers herself down onto the soft grass beside @Hazel, shoulders loosening for the first time, speaking quietly, mouth moving in sync with her words: "It's hard. Always watching. I forget how to stop." Hazel's mouth stays still, listening warmly. Only Luna's voice plays. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker luna">Luna</span><span class="voice-tag">Gia</span><q>It's hard. Always watching. I forget how to stop.</q></p>
+      </div>
+    </li>
+
+    <li class="clip" id="clip-12">
+      <div class="clip-head">
+        <span class="clip-num">12</span>
+        <span class="clip-time">2:45–3:00</span>
+        <h3 class="clip-title">Hazel's gentle response</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>@Hazel leans her head gently against @Luna's shoulder. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="prompt-block lipsync">
+        <span class="prompt-label">video_prompt <span class="tag">· lip-sync, generate_audio: true</span></span>
+        <p>@Hazel leans her head gently against @Luna's shoulder, speaking softly, mouth moving in sync with her words: "You don't have to stop forever. Just for right now." Luna's mouth stays still, closing her eyes for a moment, soaking in the quiet. Only Hazel's voice plays. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker hazel">Hazel</span><span class="voice-tag">Hana</span><q>You don't have to stop forever. Just for right now.</q></p>
+      </div>
+    </li>
+
+    <li class="clip" id="clip-13">
+      <div class="clip-head">
+        <span class="clip-num">13</span>
+        <span class="clip-time">3:00–3:15</span>
+        <h3 class="clip-title">Resolution</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>Pixar/Disney 3D animation style. @Luna and @Hazel sit together in the golden meadow as the sun begins to set, the flower crown still resting on Luna's head, both watching the sky in comfortable silence. Warm, peaceful, tender mood. Ambient forest sound only, no background music or score.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker narrator">Narrator</span><span class="voice-tag">Liza</span><q>That day, Luna learned something new: watching over everyone else didn't mean she couldn't be watched over too. And for five whole minutes, she let herself just... be.</q></p>
+      </div>
+    </li>
+
+    <li class="clip" id="clip-14">
+      <div class="clip-head">
+        <span class="clip-num">14</span>
+        <span class="clip-time">3:15–3:30</span>
+        <h3 class="clip-title">Generic outro invite</h3>
+      </div>
+      <div class="prompt-block">
+        <span class="prompt-label">video_prompt</span>
+        <p>@Luna stands with @Hazel in the golden meadow, still wearing the flower crown, warm and happy. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="prompt-block lipsync">
+        <span class="prompt-label">video_prompt <span class="tag">· lip-sync, generate_audio: true</span></span>
+        <p>@Luna turns to face the camera, warm and a little surprised at her own smile, still wearing the flower crown, speaking, mouth moving in sync with her words: "There's always something new happening here in Whisperwood Forest — come back soon and see what we get up to next!" @Hazel is visible beside her, smiling proudly, mouth not moving. Only Luna's voice plays. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style.</p>
+      </div>
+      <div class="lines">
+        <span class="lines-label">lines</span>
+        <p class="line"><span class="speaker luna">Luna</span><span class="voice-tag">Gia</span><q>There's always something new happening here in Whisperwood Forest — come back soon and see what we get up to next!</q></p>
+      </div>
+    </li>
+
+  </ol>
+
+  <section class="music-arc">
+    <h2>Music</h2>
+    <p>One continuous track for the full 3:30, generated once (2–3 mood sections crossfaded together, same approach as the earlier episodes).</p>
+    <div class="beats">
+      <div class="beat"><span class="range">Clips 1–2</span><span class="mood">Warm, playful, slightly distant — the fun happening elsewhere</span></div>
+      <div class="beat"><span class="range">Clips 2–3</span><span class="mood">Steady, watchful under Luna's stillness</span></div>
+      <div class="beat"><span class="range">Clips 4–6</span><span class="mood">Gentle and curious through Hazel's questions</span></div>
+      <div class="beat"><span class="range">Clips 7–8</span><span class="mood">Soft and patient while the crown is made</span></div>
+      <div class="beat"><span class="range">Clips 9–11</span><span class="mood">Tender, a little vulnerable through Luna's admission</span></div>
+      <div class="beat"><span class="range">Clips 12–13</span><span class="mood">Warm and settled for the resolution</span></div>
+      <div class="beat"><span class="range">Clip 14</span><span class="mood">Bright and warm for the close</span></div>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    episodes/episode-4-luna-hazel-prompts.md &middot; Whisperwood Forest &middot; Episode 4
+  </footer>
+
+</div>
