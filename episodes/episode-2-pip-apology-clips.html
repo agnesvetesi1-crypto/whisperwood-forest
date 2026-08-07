@@ -1,0 +1,695 @@
+<style>
+  :root {
+    --paper: #f6f0e2;
+    --surface: #fffdf8;
+    --surface-mono: #efe7d2;
+    --ink: #2a251d;
+    --ink-soft: #6b6350;
+    --line: #e0d6be;
+    --moss: #4f6338;
+    --dusk: #46527a;
+    --gold: #a86a25;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #1c1912;
+      --surface: #242017;
+      --surface-mono: #2c2718;
+      --ink: #f3ecda;
+      --ink-soft: #c2b79e;
+      --line: #3b3424;
+      --moss: #92ac66;
+      --dusk: #93a0d6;
+      --gold: #e3a758;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #1c1912;
+    --surface: #242017;
+    --surface-mono: #2c2718;
+    --ink: #f3ecda;
+    --ink-soft: #c2b79e;
+    --line: #3b3424;
+    --moss: #92ac66;
+    --dusk: #93a0d6;
+    --gold: #e3a758;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    margin: 0;
+    font-family: Optima, "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.55;
+  }
+
+  .page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  h1, h2, h3 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-weight: 600;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  .eyebrow {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Masthead ---------- */
+
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding-bottom: 2.25rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .masthead-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .masthead h1 {
+    font-size: clamp(2rem, 5.5vw, 2.85rem);
+    line-height: 1.08;
+  }
+
+  .masthead .subtitle {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1.1rem;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin-top: 0.4rem;
+  }
+
+  .meta-row span:not(:last-child)::after {
+    content: "·";
+    margin-left: 1rem;
+    color: var(--line);
+  }
+
+  .bulk-btn, .save-btn {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 0.45rem 0.8rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .bulk-btn:hover, .save-btn:hover {
+    border-color: var(--dusk);
+    color: var(--ink);
+  }
+
+  .bulk-btn:focus-visible, .save-btn:focus-visible {
+    outline: 2px solid var(--dusk);
+    outline-offset: 2px;
+  }
+
+  .bulk-btn.saved, .save-btn.saved {
+    border-color: var(--moss);
+    color: var(--moss);
+  }
+
+  /* ---------- Cast ---------- */
+
+  .cast {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .cast-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.5rem 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    background: var(--surface);
+    font-size: 0.88rem;
+  }
+
+  .cast-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .cast-chip .name { font-weight: 600; }
+  .cast-chip .voice {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+  }
+
+  .pip-dot { background: var(--gold); }
+  .milo-dot { background: var(--moss); }
+  .narrator-dot { background: var(--dusk); }
+
+  /* ---------- Notes ---------- */
+
+  .notes {
+    margin: 1.75rem 0 0;
+    padding: 1.1rem 1.4rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+
+  .notes strong { color: var(--ink); }
+
+  /* ---------- Gallery ---------- */
+
+  .gallery {
+    list-style: none;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 720px) {
+    .gallery { grid-template-columns: 1fr 1fr; }
+  }
+
+  .clip-card {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--surface);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .clip-card video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    background: #000;
+  }
+
+  .clip-body {
+    padding: 0.9rem 1.05rem 1.05rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .clip-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+
+  .clip-num {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 1.3rem;
+    color: var(--ink-soft);
+    opacity: 0.55;
+  }
+
+  .clip-title {
+    font-size: 1.02rem;
+    flex: 1;
+  }
+
+  .clip-time {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+  }
+
+  .clip-line {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  .clip-line .speaker {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .clip-line q {
+    quotes: "\201C" "\201D";
+    font-style: italic;
+  }
+
+  .clip-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    margin-top: 0.2rem;
+  }
+
+  .character-tag {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    color: var(--ink-soft);
+  }
+
+  .dl-btn {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    color: var(--dusk);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+    background: var(--surface-mono);
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .dl-btn:hover {
+    border-color: var(--dusk);
+  }
+
+  .dl-btn:focus-visible {
+    outline: 2px solid var(--dusk);
+    outline-offset: 2px;
+  }
+
+  .dl-btn.saved {
+    color: var(--moss);
+    border-color: var(--moss);
+  }
+
+  .dl-btn.downloading {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  /* ---------- Colophon ---------- */
+
+  .colophon {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .masthead { animation: rise 0.5s ease-out; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+</style>
+
+<div class="page">
+
+  <header class="masthead">
+    <div class="masthead-top">
+      <span class="eyebrow">Whisperwood Forest &middot; Episode 2 &middot; Video clips</span>
+      <button class="save-btn" type="button" id="downloadPageBtn">Download HTML</button>
+    </div>
+    <h1>Pip bocsánatot kér <span style="color: var(--ink-soft); font-weight: 400;">/ Pip Says Sorry</span></h1>
+    <p class="subtitle">A bocsánatkérés nem szó, hanem tett — Pip megtanulja helyrehozni, amit elrontott.</p>
+    <div class="meta-row">
+      <span>14 clips</span>
+      <span>15s each</span>
+      <span>~3:30 total</span>
+      <span>Seedance 2.0</span>
+      <span>16:9</span>
+    </div>
+  </header>
+
+  <section class="cast">
+    <div class="cast-chip"><span class="cast-dot pip-dot"></span><span class="name">Pip</span><span class="voice">voice: Zane</span></div>
+    <div class="cast-chip"><span class="cast-dot milo-dot"></span><span class="name">Milo</span><span class="voice">voice: Leo</span></div>
+    <div class="cast-chip"><span class="cast-dot narrator-dot"></span><span class="name">Narrator</span><span class="voice">voice: Liza</span></div>
+  </section>
+
+  <aside class="notes">
+    Each card streams its clip directly and offers a one-click download. Clicking
+    <strong>Download</strong> fetches the file and saves it to your device; if your
+    browser blocks that (cross-origin restrictions), it opens the clip in a new tab
+    instead — right-click it there and choose "Save video as…". Dialogue and narration
+    are baked into each clip's native audio; clips 1, 4, and 13 are ambient/visual-only.
+  </aside>
+
+  <ol class="gallery">
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_222451_57fbe988-8818-4687-bee0-53814ca2543b.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">01</span>
+          <h3 class="clip-title">Cold open, forest establishing shot</h3>
+          <span class="clip-time">0:00–0:15</span>
+        </div>
+        <p class="clip-line" style="font-style: italic;">Ambient only — no baked dialogue.</p>
+        <div class="clip-foot">
+          <span class="character-tag">Narrator</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260805_222451_57fbe988-8818-4687-bee0-53814ca2543b.mp4" data-filename="ep2-clip01-cold-open.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_074802_94559bc5-e233-4f9b-92d0-ea934d449014.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">02</span>
+          <h3 class="clip-title">Pip's whirlwind intro</h3>
+          <span class="clip-time">0:15–0:30</span>
+        </div>
+        <p class="clip-line"><span class="speaker">Pip</span> <q>Morning, morning, MORNING! So much to do, so little time — can't stop, gotta go, catch you later!</q></p>
+        <div class="clip-foot">
+          <span class="character-tag">Pip (Zane)</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_074802_94559bc5-e233-4f9b-92d0-ea934d449014.mp4" data-filename="ep2-clip02-pip-intro.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_080708_bfc54301-13ee-4046-9079-8367f8e23af4.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">03</span>
+          <h3 class="clip-title">Milo's leaf house</h3>
+          <span class="clip-time">0:30–0:45</span>
+        </div>
+        <p class="clip-line"><span class="speaker">Milo</span> <q>There... almost perfect. Just needed one more leaf for the roof.</q></p>
+        <div class="clip-foot">
+          <span class="character-tag">Milo (Leo)</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_080708_bfc54301-13ee-4046-9079-8367f8e23af4.mp4" data-filename="ep2-clip03-leaf-house.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_092200_115f810c-e976-4fcd-b165-5825f31fe006.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">04</span>
+          <h3 class="clip-title">The crash</h3>
+          <span class="clip-time">0:45–1:00</span>
+        </div>
+        <p class="clip-line" style="font-style: italic;">Visual-only beat — no dialogue.</p>
+        <div class="clip-foot">
+          <span class="character-tag">Pip</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_092200_115f810c-e976-4fcd-b165-5825f31fe006.mp4" data-filename="ep2-clip04-the-crash.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_154501_778d460b-c5d4-4762-9b5a-8fe47555087c.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">05</span>
+          <h3 class="clip-title">Pip, oblivious</h3>
+          <span class="clip-time">1:00–1:15</span>
+        </div>
+        <p class="clip-line"><span class="speaker">Pip</span> <q>Fastest squirrel in the whole forest — that's me, no contest!</q></p>
+        <div class="clip-foot">
+          <span class="character-tag">Pip (Zane)</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_154501_778d460b-c5d4-4762-9b5a-8fe47555087c.mp4" data-filename="ep2-clip05-pip-oblivious.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_115601_d882fdec-6eb9-4fcb-947a-4ab926b01a06.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">06</span>
+          <h3 class="clip-title">Milo discovers the wreckage</h3>
+          <span class="clip-time">1:15–1:30</span>
+        </div>
+        <p class="clip-line"><span class="speaker">Milo</span> <q>My... my house. It's all broken.</q></p>
+        <div class="clip-foot">
+          <span class="character-tag">Milo (Leo)</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_115601_d882fdec-6eb9-4fcb-947a-4ab926b01a06.mp4" data-filename="ep2-clip06-wreckage.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_203208_3f789c1d-a958-4c1d-99b0-427b06de7871.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">07</span>
+          <h3 class="clip-title">Milo sits with the loss</h3>
+          <span class="clip-time">1:30–1:45</span>
+        </div>
+        <p class="clip-line"><span class="speaker">Milo</span> <q>I picked every one of these leaves myself. Found just the right twigs.</q></p>
+        <div class="clip-foot">
+          <span class="character-tag">Milo (Leo)</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_203208_3f789c1d-a958-4c1d-99b0-427b06de7871.mp4" data-filename="ep2-clip07-sits-with-loss.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_130031_6788a5c5-68fb-4135-90fd-debd1e7a15a0.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">08</span>
+          <h3 class="clip-title">Milo tries alone, and stops</h3>
+          <span class="clip-time">1:45–2:00</span>
+        </div>
+        <p class="clip-line"><span class="speaker">Milo</span> <q>It's no use starting over all by myself. It won't be the same.</q></p>
+        <div class="clip-foot">
+          <span class="character-tag">Milo (Leo)</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_130031_6788a5c5-68fb-4135-90fd-debd1e7a15a0.mp4" data-filename="ep2-clip08-tries-alone.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_133453_2ff4e993-d2d7-4a14-97c9-9c249e96bcbc.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">09</span>
+          <h3 class="clip-title">Pip notices something's wrong</h3>
+          <span class="clip-time">2:00–2:15</span>
+        </div>
+        <p class="clip-line"><span class="speaker">Pip</span> <q>Huh... why do I have leaves stuck all over me?</q></p>
+        <div class="clip-foot">
+          <span class="character-tag">Pip (Zane)</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_133453_2ff4e993-d2d7-4a14-97c9-9c249e96bcbc.mp4" data-filename="ep2-clip09-pip-notices.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_163021_88941fe9-6ca0-4cac-bcb3-97b31a332b30.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">10</span>
+          <h3 class="clip-title">Pip races back and realizes</h3>
+          <span class="clip-time">2:15–2:30</span>
+        </div>
+        <p class="clip-line"><span class="speaker">Pip</span> <q>Oh no... Milo, I— I did this, didn't I?</q></p>
+        <div class="clip-foot">
+          <span class="character-tag">Pip (Zane)</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_163021_88941fe9-6ca0-4cac-bcb3-97b31a332b30.mp4" data-filename="ep2-clip10-pip-races-back.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_200445_52013440-473f-4549-9b9f-14d0404a79a0.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">11</span>
+          <h3 class="clip-title">Milo's honest response</h3>
+          <span class="clip-time">2:30–2:45</span>
+        </div>
+        <p class="clip-line"><span class="speaker">Milo</span> <q>Saying sorry doesn't fix my house, Pip.</q></p>
+        <div class="clip-foot">
+          <span class="character-tag">Milo (Leo)</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_200445_52013440-473f-4549-9b9f-14d0404a79a0.mp4" data-filename="ep2-clip11-milos-response.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_171612_a00ec25a-8879-4bc7-a209-94c03b4eb04f.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">12</span>
+          <h3 class="clip-title">Pip commits to fixing it</h3>
+          <span class="clip-time">2:45–3:00</span>
+        </div>
+        <p class="clip-line"><span class="speaker">Pip</span> <q>Then let's fix it. Together. I'll gather the leaves — you just tell me exactly how you want them.</q></p>
+        <div class="clip-foot">
+          <span class="character-tag">Pip (Zane)</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_171612_a00ec25a-8879-4bc7-a209-94c03b4eb04f.mp4" data-filename="ep2-clip12-commits-to-fixing.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_173633_e0c34120-593d-4f1c-b807-84c823a55629.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">13</span>
+          <h3 class="clip-title">Rebuilding, together</h3>
+          <span class="clip-time">3:00–3:15</span>
+        </div>
+        <p class="clip-line"><span class="speaker">Narrator</span> <q>Pip learned that sorry is just the beginning — the rest is showing up, and helping put things right.</q></p>
+        <div class="clip-foot">
+          <span class="character-tag">Narrator (Liza)</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_173633_e0c34120-593d-4f1c-b807-84c823a55629.mp4" data-filename="ep2-clip13-rebuilding.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="clip-card">
+      <video controls preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_192836_d23ab2da-39c1-4e0f-9f15-364f6654ebb9.mp4"></video>
+      <div class="clip-body">
+        <div class="clip-head">
+          <span class="clip-num">14</span>
+          <h3 class="clip-title">Outro</h3>
+          <span class="clip-time">3:15–3:30</span>
+        </div>
+        <p class="clip-line"><span class="speaker">Pip</span> <q>There's always something new happening here in Whisperwood Forest — come back soon and see what we get up to next!</q></p>
+        <div class="clip-foot">
+          <span class="character-tag">Pip (Zane)</span>
+          <a class="dl-btn" href="https://d8j0ntlcm91z4.cloudfront.net/user_3Fh29NT2UAtyWbtGGJXnZnVjRxI/hf_20260806_192836_d23ab2da-39c1-4e0f-9f15-364f6654ebb9.mp4" data-filename="ep2-clip14-outro.mp4" download>Download</a>
+        </div>
+      </div>
+    </li>
+
+  </ol>
+
+  <footer class="colophon">
+    episodes/episode-2-pip-apology-clips.md &middot; Whisperwood Forest &middot; Episode 2
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    function legacyDownload(url, filename) {
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = filename || '';
+      a.target = '_blank';
+      a.rel = 'noopener';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    async function downloadClip(btn) {
+      var url = btn.getAttribute('href');
+      var filename = btn.getAttribute('data-filename') || 'clip.mp4';
+      btn.classList.add('downloading');
+      var originalText = btn.textContent;
+      btn.textContent = 'Fetching…';
+      try {
+        var res = await fetch(url, { mode: 'cors' });
+        if (!res.ok) throw new Error('bad response');
+        var blob = await res.blob();
+        var blobUrl = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(function () { URL.revokeObjectURL(blobUrl); }, 2000);
+        btn.classList.add('saved');
+        btn.textContent = 'Saved ✓';
+      } catch (e) {
+        legacyDownload(url, filename);
+        btn.classList.add('saved');
+        btn.textContent = 'Opened ↗';
+      } finally {
+        btn.classList.remove('downloading');
+        clearTimeout(btn._resetTimer);
+        btn._resetTimer = setTimeout(function () {
+          btn.classList.remove('saved');
+          btn.textContent = originalText;
+        }, 2200);
+      }
+    }
+
+    document.querySelectorAll('.dl-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        downloadClip(btn);
+      });
+    });
+
+    var downloadPageBtn = document.getElementById('downloadPageBtn');
+    if (downloadPageBtn) {
+      downloadPageBtn.addEventListener('click', function () {
+        var doc = document.documentElement.cloneNode(true);
+        var liveBtn = doc.querySelector('#downloadPageBtn');
+        if (liveBtn) {
+          liveBtn.textContent = 'Download HTML';
+          liveBtn.classList.remove('saved');
+        }
+        var html = '<!doctype html>\n' + doc.outerHTML;
+        var blob = new Blob([html], { type: 'text/html' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'episode-2-pip-apology-clips.html';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+
+        downloadPageBtn.textContent = 'Saved ✓';
+        downloadPageBtn.classList.add('saved');
+        clearTimeout(downloadPageBtn._saveTimer);
+        downloadPageBtn._saveTimer = setTimeout(function () {
+          downloadPageBtn.textContent = 'Download HTML';
+          downloadPageBtn.classList.remove('saved');
+        }, 1400);
+      });
+    }
+  })();
+</script>
