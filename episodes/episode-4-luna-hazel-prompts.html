@@ -109,6 +109,43 @@
     color: var(--line);
   }
 
+  .masthead-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .save-btn {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 0.45rem 0.8rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .save-btn:hover {
+    border-color: var(--dusk);
+    color: var(--ink);
+  }
+
+  .save-btn:focus-visible {
+    outline: 2px solid var(--dusk);
+    outline-offset: 2px;
+  }
+
+  .save-btn.saved {
+    border-color: var(--moss);
+    color: var(--moss);
+  }
+
   /* ---------- Premise ---------- */
 
   .premise {
@@ -464,7 +501,10 @@
 <div class="page">
 
   <header class="masthead">
-    <span class="eyebrow">Whisperwood Forest &middot; Episode 4</span>
+    <div class="masthead-top">
+      <span class="eyebrow">Whisperwood Forest &middot; Episode 4</span>
+      <button class="save-btn" type="button" id="downloadBtn">Download HTML</button>
+    </div>
     <h1>Luna sosem áll meg <span style="color: var(--ink-soft); font-weight: 400;">/ Luna Never Stops</span></h1>
     <p class="subtitle">A hűséges őrszem megtanulja, hogy őt is lehet néha körülvenni.</p>
     <div class="meta-row">
@@ -866,5 +906,35 @@
       e.preventDefault();
       activate(target);
     });
+
+    var downloadBtn = document.getElementById('downloadBtn');
+    if (downloadBtn) {
+      downloadBtn.addEventListener('click', function () {
+        var doc = document.documentElement.cloneNode(true);
+        var liveBtn = doc.querySelector('#downloadBtn');
+        if (liveBtn) {
+          liveBtn.textContent = 'Download HTML';
+          liveBtn.classList.remove('saved');
+        }
+        var html = '<!doctype html>\n' + doc.outerHTML;
+        var blob = new Blob([html], { type: 'text/html' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'episode-4-luna-hazel-prompts.html';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+
+        downloadBtn.textContent = 'Saved ✓';
+        downloadBtn.classList.add('saved');
+        clearTimeout(downloadBtn._saveTimer);
+        downloadBtn._saveTimer = setTimeout(function () {
+          downloadBtn.textContent = 'Download HTML';
+          downloadBtn.classList.remove('saved');
+        }, 1400);
+      });
+    }
   })();
 </script>
