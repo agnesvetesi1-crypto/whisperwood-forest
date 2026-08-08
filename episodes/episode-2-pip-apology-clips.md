@@ -33,16 +33,17 @@ All dialogue is baked into its clip's native video audio via the lip-sync workfl
 (clips 4, 9–12 etc. carry it in-frame). Clips 1 and 13 are ambient-only in the video
 itself, so the Narrator line for those two is generated separately below.
 
-## Narrator audio (2026-08-08)
+## Narrator audio (2026-08-08, updated same day)
 
-Generated via vidIQ (`vidiq_voiceover_generate`), voice **George** (`JBFqnCBsd6RMkjVDRZzb`)
-— the new locked vidIQ Narrator voice, replacing Higgsfield's Liza preset which was out
-of credits (see `world/production-bible.md`).
+Generated via vidIQ (`vidiq_voiceover_generate`), voice **Lily** (`pFZP5JQG7iQjIQuC4Bku`)
+— the locked vidIQ Narrator voice, replacing Higgsfield's Liza preset which was out of
+credits (see `world/production-bible.md`). Originally generated with George, then
+regenerated with Lily per Ági's request for a soft, kind-voiced woman.
 
 | Clip | Line | Duration | Audio |
 |---|---|---|---|
-| 1 | "Every day in Whisperwood Forest is a little different — today starts with someone in an awfully big hurry." | 6.4s | delivered to user as `narrator-clip1.mp3` |
-| 13 | "Pip learned that sorry is just the beginning — the rest is showing up, and helping put things right." | 5.9s | delivered to user as `narrator-clip13.mp3` |
+| 1 | "Every day in Whisperwood Forest is a little different — today starts with someone in an awfully big hurry." | 6.7s | delivered to user as `narrator-clip1.mp3` |
+| 13 | "Pip learned that sorry is just the beginning — the rest is showing up, and helping put things right." | 6.6s | delivered to user as `narrator-clip13.mp3` |
 
 Source URLs were signed S3 links (12h expiry) — regenerate from vidIQ if a fresh copy
 is needed; the delivered files are the permanent copies.

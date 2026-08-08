@@ -42,13 +42,12 @@ preset (vidIQ has no equivalent built-in voice). The locked replacement:
 
 | Character | Engine | Voice | voiceId |
 |---|---|---|---|
-| **Narrator** | vidIQ / ElevenLabs | George — warm storyteller | `JBFqnCBsd6RMkjVDRZzb` |
+| **Narrator** | vidIQ / ElevenLabs | Lily — soft, warm, velvety female | `pFZP5JQG7iQjIQuC4Bku` |
 
-Chosen by default (no reply received to the voice-pick question before this session
-resumed) — override to Lily (`pFZP5JQG7iQjIQuC4Bku`) or Bella (`hpp4J3VqNfWAUOO0d1Us`)
-if preferred; update this table and regenerate past vidIQ narration if so. This
-voiceId must stay locked across future episodes the same way the Higgsfield IDs are,
-for consistency.
+Switched from George to Lily on 2026-08-08 per Ági's request ("lágy kedves hangú nő" —
+a soft, kind-voiced woman). This voiceId must stay locked across future episodes the
+same way the Higgsfield IDs are, for consistency. (George `JBFqnCBsd6RMkjVDRZzb` was
+the initial default before this change, in case of a future revert.)
 
 ---
 
