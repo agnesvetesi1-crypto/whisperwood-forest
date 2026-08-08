@@ -29,6 +29,35 @@ matches on character pair (Pip + Milo) and timestamp clustering with the rest of
 episode's generation run, but worth a visual spot-check against the intended outro
 framing before final assembly.
 
-No narration/dialogue audio was separately generated for this episode — every line is
-baked into its clip's native audio track via the lip-sync workflow (clips 1, 4, and 13
-are ambient/visual-only by design). No music bed has been generated yet for Episode 2.
+All dialogue is baked into its clip's native video audio via the lip-sync workflow
+(clips 4, 9–12 etc. carry it in-frame). Clips 1 and 13 are ambient-only in the video
+itself, so the Narrator line for those two is generated separately below.
+
+## Narrator audio (2026-08-08)
+
+Generated via vidIQ (`vidiq_voiceover_generate`), voice **George** (`JBFqnCBsd6RMkjVDRZzb`)
+— the new locked vidIQ Narrator voice, replacing Higgsfield's Liza preset which was out
+of credits (see `world/production-bible.md`).
+
+| Clip | Line | Duration | Audio |
+|---|---|---|---|
+| 1 | "Every day in Whisperwood Forest is a little different — today starts with someone in an awfully big hurry." | 6.4s | delivered to user as `narrator-clip1.mp3` |
+| 13 | "Pip learned that sorry is just the beginning — the rest is showing up, and helping put things right." | 5.9s | delivered to user as `narrator-clip13.mp3` |
+
+Source URLs were signed S3 links (12h expiry) — regenerate from vidIQ if a fresh copy
+is needed; the delivered files are the permanent copies.
+
+## Music bed (2026-08-08)
+
+Generated via vidIQ (`vidiq_generate_music`) in 3 mood sections, crossfaded into one
+continuous ~3:33 track with `ffmpeg acrossfade` (3s crossfades), matching the episode's
+emotional arc:
+
+| Section | Clips | Duration | Mood |
+|---|---|---|---|
+| A | 1–4 | ~60s | Light, warm, gently bouncy — peaceful morning into Pip's rushing energy, ending at the crash |
+| B | 5–8 | ~81s | Tender, melancholic, slow cello/piano — Pip's oblivious pride, Milo's discovery and quiet grief |
+| C | 9–14 | ~78s | Warm, hopeful, building — Pip's realization, honest reconciliation, rebuilding together, bright close |
+
+Delivered to the user as `episode-2-music-bed.wav` (+ `.mp3`), ~3:33 total — a little
+longer than the 3:30 episode runtime, trim to fit in final assembly.
