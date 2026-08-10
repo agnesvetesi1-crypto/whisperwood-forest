@@ -264,13 +264,14 @@ berry-stained smiles. Pixar/Disney 3D animation style.
 
 **video_prompt (lip-sync, generate_audio: true):**
 @Bruno turns to face the camera, warm and happy, berry-stained smile, speaking, mouth
-moving in sync with his words: "There's always something new happening here in
-Whisperwood Forest — come back soon and see what we get up to next!" Coco is visible
-beside him, smiling proudly, mouth not moving. Only Bruno's voice plays. No background
-music or score, ambient forest sound only. Pixar/Disney 3D animation style.
+moving in sync with his words: "Oh, and don't worry — of course we're telling everyone
+else about the berries too. There's always something new happening here in Whisperwood
+Forest — come back soon and see what we get up to next!" Coco is visible beside him,
+smiling proudly, mouth not moving. Only Bruno's voice plays. No background music or
+score, ambient forest sound only. Pixar/Disney 3D animation style.
 
 **lines:**
-- Bruno (voice: Marcus): "There's always something new happening here in Whisperwood Forest — come back soon and see what we get up to next!"
+- Bruno (voice: Marcus): "Oh, and don't worry — of course we're telling everyone else about the berries too. There's always something new happening here in Whisperwood Forest — come back soon and see what we get up to next!"
 
 ---
 
