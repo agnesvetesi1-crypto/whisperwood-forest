@@ -79,6 +79,12 @@ Every episode (after Episode 0) follows this shape:
 
 > "[Character], warm and happy, turning to camera: 'There's always something new happening here in Whisperwood Forest — come back soon and see what we get up to next!'"
 
+5. **Generic subscribe CTA** (15 sec, added 2026-08-10) — a separate final clip appended after the outro invite (not a replacement), always spoken by **Coco** as series lead, always the same line so it can be reused unchanged across every episode including already-produced ones. Locked line:
+
+> "@Coco stands facing the camera directly in a warm, sunny spot in Whisperwood Forest, tail wagging happily, big friendly smile, speaking warmly and directly to the viewer, mouth moving in sync with her words: 'If you had fun with us today, ask a grown-up to help you hit that subscribe button, so you never miss our next adventure here in Whisperwood Forest!' Only Coco's voice plays; her mouth moves only while she speaks these words, no other character is on screen. No background music or score, ambient forest sound only. Pixar/Disney 3D animation style, warm inviting light."
+
+Voice: Coco (Simone, `d3b201aa-086c-4d54-8568-a6bb9f4a0b63`). Asks the child to get a grown-up's help with the subscribe button rather than addressing the platform action directly to the child.
+
 ---
 
 ## 5. Character voice-and-tone notes (for writing new dialogue)

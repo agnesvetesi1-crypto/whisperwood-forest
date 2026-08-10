@@ -268,12 +268,33 @@ animation style.
 
 ---
 
+### Clip 15 — 3:30–3:45 — Subscribe CTA
+
+**video_prompt:**
+@Coco stands facing the camera directly in a warm, sunny spot in Whisperwood Forest, tail
+wagging happily, big friendly smile, ears perked. Pixar/Disney 3D animation style, warm
+inviting light.
+
+**video_prompt (lip-sync, generate_audio: true):**
+@Coco stands facing the camera directly in a warm, sunny spot in Whisperwood Forest, tail
+wagging happily, speaking warmly and directly to the viewer, mouth moving in sync with her
+words: "If you had fun with us today, ask a grown-up to help you hit that subscribe
+button, so you never miss our next adventure here in Whisperwood Forest!" Only Coco's
+voice plays; her mouth moves only while she speaks these words, no other character is on
+screen. No background music or score, ambient forest sound only. Pixar/Disney 3D animation
+style, warm inviting light.
+
+**lines:**
+- Coco (voice: Simone): "If you had fun with us today, ask a grown-up to help you hit that subscribe button, so you never miss our next adventure here in Whisperwood Forest!"
+
+---
+
 ## Music
 
-One continuous track for the full 3:30, generated once (2-3 mood sections crossfaded
+One continuous track for the full 3:45, generated once (2-3 mood sections crossfaded
 together, same approach as the earlier episodes). Suggested arc: warm, playful and
 slightly distant for the opening (clips 1-2, the fun happening elsewhere), steady and
 watchful under Luna's stillness (2-3), gentle and curious through Hazel's questions
 (4-6), soft and patient while the crown is made (7-8), tender and a little vulnerable
 through Luna's admission (9-11), warm and settled for the resolution (12-13), then
-bright and warm for the close (14).
+bright and warm for the close (14), staying warm and bright through the subscribe CTA (15).

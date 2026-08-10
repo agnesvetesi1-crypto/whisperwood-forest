@@ -287,11 +287,32 @@ only. Pixar/Disney 3D animation style.
 
 ---
 
+### Clip 15 — 3:30–3:45 — Subscribe CTA
+
+**video_prompt:**
+@Coco stands facing the camera directly in a warm, sunny spot in Whisperwood Forest, tail
+wagging happily, big friendly smile, ears perked. Pixar/Disney 3D animation style, warm
+inviting light.
+
+**video_prompt (lip-sync, generate_audio: true):**
+@Coco stands facing the camera directly in a warm, sunny spot in Whisperwood Forest, tail
+wagging happily, speaking warmly and directly to the viewer, mouth moving in sync with her
+words: "If you had fun with us today, ask a grown-up to help you hit that subscribe
+button, so you never miss our next adventure here in Whisperwood Forest!" Only Coco's
+voice plays; her mouth moves only while she speaks these words, no other character is on
+screen. No background music or score, ambient forest sound only. Pixar/Disney 3D animation
+style, warm inviting light.
+
+**lines:**
+- Coco (voice: Simone): "If you had fun with us today, ask a grown-up to help you hit that subscribe button, so you never miss our next adventure here in Whisperwood Forest!"
+
+---
+
 ## Music
 
-One continuous track for the full 3:30, generated once (2-3 mood sections crossfaded
+One continuous track for the full 3:45, generated once (2-3 mood sections crossfaded
 together, same approach as the earlier episodes). Suggested arc: bright and eager for
 the opening (clips 1-5, the shortcut idea and setting off), tense and a little
 uncertain as the trail vanishes and doubt creeps in (6-10), warm and settling once
 Benny speaks up and leads the way (11-13), then bright and warm again for the close
-(14).
+(14), staying warm and bright through the subscribe CTA (15).

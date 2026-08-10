@@ -272,3 +272,24 @@ forest sound only. Pixar/Disney 3D animation style.
 
 **lines:**
 - Pip (voice: Zane): "There's always something new happening here in Whisperwood Forest — come back soon and see what we get up to next!"
+
+---
+
+### Clip 15 — 3:30–3:45 — Subscribe CTA
+
+**video_prompt:**
+@Coco stands facing the camera directly in a warm, sunny spot in Whisperwood Forest, tail
+wagging happily, big friendly smile, ears perked. Pixar/Disney 3D animation style, warm
+inviting light.
+
+**video_prompt (lip-sync, generate_audio: true):**
+@Coco stands facing the camera directly in a warm, sunny spot in Whisperwood Forest, tail
+wagging happily, speaking warmly and directly to the viewer, mouth moving in sync with her
+words: "If you had fun with us today, ask a grown-up to help you hit that subscribe
+button, so you never miss our next adventure here in Whisperwood Forest!" Only Coco's
+voice plays; her mouth moves only while she speaks these words, no other character is on
+screen. No background music or score, ambient forest sound only. Pixar/Disney 3D animation
+style, warm inviting light.
+
+**lines:**
+- Coco (voice: Simone): "If you had fun with us today, ask a grown-up to help you hit that subscribe button, so you never miss our next adventure here in Whisperwood Forest!"

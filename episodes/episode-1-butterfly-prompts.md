@@ -202,10 +202,32 @@ Golden sunset. @Coco sits peacefully at the edge of the meadow, silhouetted agai
 
 ---
 
+### Clip 15 — 3:30–3:45 — Subscribe CTA
+
+**video_prompt:**
+@Coco stands facing the camera directly in a warm, sunny spot in Whisperwood Forest, tail
+wagging happily, big friendly smile, ears perked. Pixar/Disney 3D animation style, warm
+inviting light.
+
+**video_prompt (lip-sync, generate_audio: true):**
+@Coco stands facing the camera directly in a warm, sunny spot in Whisperwood Forest, tail
+wagging happily, speaking warmly and directly to the viewer, mouth moving in sync with her
+words: "If you had fun with us today, ask a grown-up to help you hit that subscribe
+button, so you never miss our next adventure here in Whisperwood Forest!" Only Coco's
+voice plays; her mouth moves only while she speaks these words, no other character is on
+screen. No background music or score, ambient forest sound only. Pixar/Disney 3D animation
+style, warm inviting light.
+
+**lines:**
+- Coco (voice: Simone): "If you had fun with us today, ask a grown-up to help you hit that subscribe button, so you never miss our next adventure here in Whisperwood Forest!"
+
+---
+
 ## Music
 
-One continuous track for the full 3:30, generated once (e.g. via vidIQ's music tool, in
+One continuous track for the full 3:45, generated once (e.g. via vidIQ's music tool, in
 2-3 mood sections crossfaded together, same approach as Episode 0). Suggested arc:
 gentle/curious (clips 1-2), playful and upbeat during the chase (3-4), calm and warm for
 the Oliver dialogue (5-8), swelling with wonder at the meadow (9-10), dropping to
-near-silence for the nose-landing moment (11), then tender and warm through the close (12-14).
+near-silence for the nose-landing moment (11), then tender and warm through the close
+(12-14), staying warm and bright through the subscribe CTA (15).
