@@ -1,6 +1,7 @@
 # Episode 6 — "A bogyós titok" ("The Berry Secret")
 
-15 clips × 15 seconds = ~3.75 minutes. Model: Seedance 2.0. Aspect ratio 16:9.
+16 clips × 15 seconds = ~4 minutes (15s episode-intro pre-roll + 15 story/CTA clips).
+Model: Seedance 2.0. Aspect ratio 16:9.
 
 **Story:** Bruno stumbles on a hidden clearing overflowing with the best berries he's
 ever tasted — and decides to keep it secret so there's "enough for him." He spends the
@@ -30,6 +31,26 @@ Each clip below has two parts for the decoupled audio workflow (see concept doc 
 > narration or speech in the prompt, even to say there isn't any, makes Seedance invent
 > its own random spoken audio for the clip. Just describe what's on screen; the narrator
 > line only ever goes in the `lines` section below, generated separately.
+
+---
+
+### Clip 0 — Pre-roll (before 0:00) — Episode intro (Luna)
+
+**video_prompt:**
+@Luna stands alert and steady in a sunny spot at the edge of Whisperwood Forest, facing
+the camera directly, calm and confident. Pixar/Disney 3D animation style, warm morning
+light.
+
+**video_prompt (lip-sync, generate_audio: true):**
+@Luna stands alert and steady in a sunny spot at the edge of Whisperwood Forest, facing
+the camera directly, calm and confident, speaking briefly, mouth moving in sync with her
+words: "Hey. It's Luna. Today's story is 'The Berry Secret.' Trust me — you'll want to
+watch this one." Only Luna's voice plays; her mouth moves only while she speaks these
+words, no other character is on screen. No background music or score, ambient forest
+sound only. Pixar/Disney 3D animation style, warm morning light.
+
+**lines:**
+- Luna (voice: Gia): "Hey. It's Luna. Today's story is 'The Berry Secret.' Trust me — you'll want to watch this one."
 
 ---
 
