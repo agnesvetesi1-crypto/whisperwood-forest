@@ -1,0 +1,409 @@
+<title>Whisperwood Forest — Episode 2 Launch Kit</title>
+<style>
+  :root {
+    --bg: #f5f1e3;
+    --surface: #ece3cd;
+    --surface-raised: #fffcf5;
+    --border: #ddcfa9;
+    --ink: #241f14;
+    --ink-soft: #6e6247;
+    --accent: #93641f;
+    --accent-strong: #74501a;
+    --accent-soft: #e9d8ab;
+    --link: #6b4a9e;
+    --optional: #3f6b52;
+    --optional-soft: #dde8e0;
+    --mono-bg: #211b10;
+    --mono-ink: #f1e9d6;
+    --mono-accent: #e0b25a;
+    --focus: #3b6bd6;
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #17130c;
+    --surface: #211b12;
+    --surface-raised: #272016;
+    --border: #3b3120;
+    --ink: #f1e9d6;
+    --ink-soft: #bcae8c;
+    --accent: #e0b25a;
+    --accent-strong: #eec37a;
+    --accent-soft: #362a13;
+    --link: #b6a0e8;
+    --optional: #8fc0a0;
+    --optional-soft: #1e2c22;
+    --mono-bg: #100d08;
+    --mono-ink: #ecdfc2;
+    --mono-accent: #eec37a;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17130c;
+      --surface: #211b12;
+      --surface-raised: #272016;
+      --border: #3b3120;
+      --ink: #f1e9d6;
+      --ink-soft: #bcae8c;
+      --accent: #e0b25a;
+      --accent-strong: #eec37a;
+      --accent-soft: #362a13;
+      --link: #b6a0e8;
+      --optional: #8fc0a0;
+      --optional-soft: #1e2c22;
+      --mono-bg: #100d08;
+      --mono-ink: #ecdfc2;
+      --mono-accent: #eec37a;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0 0 4rem;
+  }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 0;
+  }
+
+  a { color: var(--link); }
+
+  header.top {
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+
+  .top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+
+
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    font-weight: 700;
+    font-size: clamp(1.7rem, 4.2vw, 2.3rem);
+    text-wrap: balance;
+    letter-spacing: -0.005em;
+    margin: 0 0 0.6rem;
+  }
+
+  .subtitle {
+    color: var(--ink-soft);
+    font-size: 0.97rem;
+    max-width: 60ch;
+    margin: 0 0 1.1rem;
+  }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .fact {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+
+  .fact b { color: var(--ink); font-weight: 700; }
+
+  nav.toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.85rem;
+  }
+
+  nav.toc a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  nav.toc a:hover { border-bottom-color: var(--accent); color: var(--ink); }
+
+  section {
+    margin-bottom: 2.75rem;
+    scroll-margin-top: 1.5rem;
+  }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .sec-num {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+
+  p { margin: 0 0 0.9rem; }
+
+  .lead { color: var(--ink-soft); font-size: 0.93rem; }
+
+  .copy-box {
+    position: relative;
+    background: var(--mono-bg);
+    color: var(--mono-ink);
+    border-radius: 10px;
+    padding: 1rem 3.4rem 1rem 1.1rem;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 0.83rem;
+    line-height: 1.65;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  button.copy {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--mono-ink);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.32rem 0.65rem;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  button.copy:hover { background: rgba(255,255,255,0.16); }
+  button.copy:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  button.copy.copied { background: var(--optional); border-color: var(--optional); color: #0e1710; }
+
+  @media (prefers-reduced-motion: reduce) {
+    button.copy { transition: none; }
+  }
+
+  .notes {
+    margin-top: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .note-row {
+    display: flex;
+    gap: 0.55rem;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+
+  .note-row .mark {
+    color: var(--accent);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .chip {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.8rem;
+    color: var(--ink);
+  }
+
+  footer {
+    max-width: 780px;
+    margin: 2.5rem auto 0;
+    padding: 1.5rem 1.25rem 0;
+    border-top: 1px solid var(--border);
+    color: var(--ink-soft);
+    font-size: 0.78rem;
+  }
+
+  footer a { color: var(--ink-soft); }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">Whisperwood Forest &mdash; Episode Launch Kit</div>
+    <h1>Episode 2 — "Pip Bocsánatot Kér" ("Pip Says Sorry")</h1>
+    <p class="subtitle">Everything to publish the upload: thumbnail brief, video description with chapter timestamps, and tags. Channel description and the monetization checklist don't change per episode &mdash; see the Episode 0 kit for those.</p>
+    <div class="facts">
+      <span class="fact">Runtime <b>~3:45</b></span>
+      <span class="fact">Audience <b>ages 3&ndash;7</b></span>
+      <span class="fact">Language <b>English</b></span>
+      <span class="fact">Made for Kids <b>Required</b></span>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <a href="#thumbnail">1. Thumbnail</a>
+    <a href="#description">2. Video description</a>
+    <a href="#tags">3. Tags</a>
+  </nav>
+
+  <section id="thumbnail">
+    <div class="sec-head">
+      <h2>1. Thumbnail</h2>
+      <span class="sec-num">1280&times;720</span>
+    </div>
+    <p class="lead">Same approach as Episode 0: generate the character art with Higgsfield, add title text as a second pass in Canva/Photopea.</p>
+    <div class="copy-box" id="box-thumb">Pixar/Disney 3D animation style, warm late-afternoon light. Close-up on @Milo in the foreground, ears drooping, eyes wide with sadness, kneeling beside his flattened leaf-and-twig house, a single broken twig in his paws — he is the clear focal point, largest and sharpest in frame. @Pip visible softly out of focus in the background, frozen mid-step, just realizing what he did. Bold, high-contrast lighting so Milo's expression reads clearly at small thumbnail size. Leave open sky space in the upper third for title text to be added afterward. No text, no logos.</div>
+    <div class="notes">
+      <div class="note-row"><span class="mark">Title ideas</span> "Pip Says Sorry 🐿️" · "Sorry Is Just the Beginning" · "Whisperwood Forest — Episode 2"</div>
+      <div class="note-row"><span class="mark">Why this moment</span> it's the episode's emotional turning point (clip 6) — Milo's heartbreak reads instantly, and it sets up the question the whole story answers: what do you do after you've broken something?</div>
+    </div>
+  </section>
+
+  <section id="description">
+    <div class="sec-head">
+      <h2>2. Video description</h2>
+      <span class="sec-num">YouTube &middot; English</span>
+    </div>
+    <p class="lead">Timestamps double as YouTube chapters once there are 3+, starting at 0:00 &mdash; this list also becomes the video's chapter bar.</p>
+    <div class="copy-box" id="box-desc">Pip the Squirrel is always in a hurry — so much of a hurry that he crashes straight through Milo the Hedgehog's carefully built leaf house without even noticing! When Milo finds the wreckage, Pip has to learn that saying sorry is only the beginning — making it right is what really counts. 🐿️🦔
+
+Whisperwood Forest is a gentle, heartwarming animated series for little ones (ages 3-7), full of wonder, kindness, and small adventures — no scares, no real danger, just good friends and gentle lessons.
+
+🍂 CHAPTERS:
+0:00 - Welcome back to Whisperwood Forest
+0:15 - Pip is in an awfully big hurry
+0:30 - Milo's little leaf house
+0:45 - Crash! Right through it
+1:15 - Milo finds the wreckage
+1:45 - Trying to fix it alone
+2:15 - Pip realizes what he did
+2:30 - "Saying sorry doesn't fix my house"
+2:45 - "Let's fix it. Together."
+3:15 - See you next time!
+3:30 - Like this story? Hit subscribe!
+
+✨ New adventures are coming soon — subscribe and ring the bell so you never miss a visit to Whisperwood Forest!
+
+This series is brought to life with the help of AI animation and voice tools, crafted with care to tell gentle stories for young viewers.
+
+#WhisperwoodForest #KidsCartoon #ForKids #Preschool #KidsAnimation</div>
+  </section>
+
+  <section id="tags">
+    <div class="sec-head">
+      <h2>3. Tags</h2>
+      <span class="sec-num">video keywords</span>
+    </div>
+    <p class="lead">Paste the whole line into the video's "Tags" field.</p>
+    <div class="chip-row">
+      <span class="chip">whisperwood forest</span>
+      <span class="chip">pip the squirrel</span>
+      <span class="chip">milo the hedgehog</span>
+      <span class="chip">apology story for kids</span>
+      <span class="chip">kids cartoon</span>
+      <span class="chip">animated series for kids</span>
+      <span class="chip">preschool cartoon</span>
+      <span class="chip">cartoon for toddlers</span>
+      <span class="chip">kids animation</span>
+      <span class="chip">forest animals cartoon</span>
+      <span class="chip">moral stories for kids</span>
+      <span class="chip">bedtime stories for kids</span>
+      <span class="chip">cute animal cartoon</span>
+      <span class="chip">family friendly cartoon</span>
+      <span class="chip">gentle cartoon for kids</span>
+      <span class="chip">cartoon for 3 year olds</span>
+      <span class="chip">cartoon for 4 year olds</span>
+      <span class="chip">sorry story for kids</span>
+      <span class="chip">new kids cartoon 2026</span>
+    </div>
+    <div class="copy-box" id="box-tags">whisperwood forest, pip the squirrel, milo the hedgehog, apology story for kids, kids cartoon, animated series for kids, preschool cartoon, cartoon for toddlers, kids animation, forest animals cartoon, moral stories for kids, bedtime stories for kids, cute animal cartoon, family friendly cartoon, gentle cartoon for kids, cartoon for 3 year olds, cartoon for 4 year olds, sorry story for kids, new kids cartoon 2026</div>
+  </section>
+
+  <footer>
+    Same channel-level info as Episode 0 (channel "About" description, monetization/COPPA checklist) &mdash; nothing there changes per episode.
+  </footer>
+</div>
+
+<script>
+  function wireCopy(boxId) {
+    const box = document.getElementById(boxId);
+    if (!box) return;
+    const btn = document.createElement("button");
+    btn.className = "copy";
+    btn.type = "button";
+    btn.textContent = "Copy";
+    btn.addEventListener("click", () => {
+      const markCopied = () => {
+        btn.textContent = "Copied";
+        btn.classList.add("copied");
+        setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("copied"); }, 1400);
+      };
+      const fallbackCopy = () => {
+        const ta = document.createElement("textarea");
+        ta.value = box.textContent;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        try {
+          document.execCommand("copy");
+          markCopied();
+        } catch (e) {
+          btn.textContent = "Copy failed";
+          setTimeout(() => { btn.textContent = "Copy"; }, 1400);
+        }
+        document.body.removeChild(ta);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(box.textContent).then(markCopied, fallbackCopy);
+      } else {
+        fallbackCopy();
+      }
+    });
+    box.appendChild(btn);
+  }
+
+  ["box-thumb", "box-desc", "box-tags"].forEach(wireCopy);
+
+</script>
