@@ -1,0 +1,564 @@
+<title>Whisperwood Forest — Episode 0 Launch Kit</title>
+<style>
+  :root {
+    --bg: #f5f1e3;
+    --surface: #ece3cd;
+    --surface-raised: #fffcf5;
+    --border: #ddcfa9;
+    --ink: #241f14;
+    --ink-soft: #6e6247;
+    --accent: #93641f;
+    --accent-strong: #74501a;
+    --accent-soft: #e9d8ab;
+    --link: #6b4a9e;
+    --req: #a23b2e;
+    --req-soft: #f3ddd8;
+    --legal: #5b4a8a;
+    --legal-soft: #e3ddf1;
+    --optional: #3f6b52;
+    --optional-soft: #dde8e0;
+    --mono-bg: #211b10;
+    --mono-ink: #f1e9d6;
+    --mono-accent: #e0b25a;
+    --focus: #3b6bd6;
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #17130c;
+    --surface: #211b12;
+    --surface-raised: #272016;
+    --border: #3b3120;
+    --ink: #f1e9d6;
+    --ink-soft: #bcae8c;
+    --accent: #e0b25a;
+    --accent-strong: #eec37a;
+    --accent-soft: #362a13;
+    --link: #b6a0e8;
+    --req: #e0836a;
+    --req-soft: #3a2420;
+    --legal: #b7a3e0;
+    --legal-soft: #2a2440;
+    --optional: #8fc0a0;
+    --optional-soft: #1e2c22;
+    --mono-bg: #100d08;
+    --mono-ink: #ecdfc2;
+    --mono-accent: #eec37a;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17130c;
+      --surface: #211b12;
+      --surface-raised: #272016;
+      --border: #3b3120;
+      --ink: #f1e9d6;
+      --ink-soft: #bcae8c;
+      --accent: #e0b25a;
+      --accent-strong: #eec37a;
+      --accent-soft: #362a13;
+      --link: #b6a0e8;
+      --req: #e0836a;
+      --req-soft: #3a2420;
+      --legal: #b7a3e0;
+      --legal-soft: #2a2440;
+      --optional: #8fc0a0;
+      --optional-soft: #1e2c22;
+      --mono-bg: #100d08;
+      --mono-ink: #ecdfc2;
+      --mono-accent: #eec37a;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0 0 4rem;
+  }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 0;
+  }
+
+  a { color: var(--link); }
+
+  header.top {
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    font-weight: 700;
+    font-size: clamp(1.7rem, 4.2vw, 2.3rem);
+    text-wrap: balance;
+    letter-spacing: -0.005em;
+    margin: 0 0 0.6rem;
+  }
+
+  .subtitle {
+    color: var(--ink-soft);
+    font-size: 0.97rem;
+    max-width: 60ch;
+    margin: 0 0 1.1rem;
+  }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .fact {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+
+  .fact b { color: var(--ink); font-weight: 700; }
+
+  nav.toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.85rem;
+  }
+
+  nav.toc a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  nav.toc a:hover { border-bottom-color: var(--accent); color: var(--ink); }
+
+  section {
+    margin-bottom: 2.75rem;
+    scroll-margin-top: 1.5rem;
+  }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .sec-num {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+
+  p { margin: 0 0 0.9rem; }
+
+  .lead { color: var(--ink-soft); font-size: 0.93rem; }
+
+  .copy-box {
+    position: relative;
+    background: var(--mono-bg);
+    color: var(--mono-ink);
+    border-radius: 10px;
+    padding: 1rem 3.4rem 1rem 1.1rem;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 0.83rem;
+    line-height: 1.65;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .copy-box .hl { color: var(--mono-accent); font-weight: 600; }
+
+  button.copy {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--mono-ink);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.32rem 0.65rem;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  button.copy:hover { background: rgba(255,255,255,0.16); }
+  button.copy:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  button.copy.copied { background: var(--optional); border-color: var(--optional); color: #0e1710; }
+
+  @media (prefers-reduced-motion: reduce) {
+    button.copy { transition: none; }
+  }
+
+  .notes {
+    margin-top: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .note-row {
+    display: flex;
+    gap: 0.55rem;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+
+  .note-row .mark {
+    color: var(--accent);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .chip {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.8rem;
+    color: var(--ink);
+  }
+
+  .checklist {
+    border-top: 1px solid var(--border);
+  }
+
+  .cl-group {
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cl-group-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .cl-group-note {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.7rem;
+    max-width: 64ch;
+  }
+
+  .cl-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+  }
+
+  .cl-item::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--ink-soft);
+    margin-top: 0.55rem;
+    flex-shrink: 0;
+  }
+
+  .status {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 0.14rem 0.45rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .status.required { background: var(--req-soft); color: var(--req); }
+  .status.legal { background: var(--legal-soft); color: var(--legal); }
+  .status.optional { background: var(--optional-soft); color: var(--optional); }
+
+  .stat-callout {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.88rem;
+    margin-top: 1rem;
+  }
+
+  .stat-callout table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stat-callout th, .stat-callout td {
+    text-align: left;
+    padding: 0.3rem 0.6rem 0.3rem 0;
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stat-callout th { color: var(--ink-soft); font-weight: 600; }
+
+  footer {
+    max-width: 780px;
+    margin: 2.5rem auto 0;
+    padding: 1.5rem 1.25rem 0;
+    border-top: 1px solid var(--border);
+    color: var(--ink-soft);
+    font-size: 0.78rem;
+  }
+
+  footer a { color: var(--ink-soft); }
+  footer ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">Whisperwood Forest — Channel Launch Kit</div>
+    <h1>Episode 0 — "Meet the Friends of Whisperwood Forest"</h1>
+    <p class="subtitle">Everything to publish the first upload and get the channel monetization-ready: thumbnail brief, video description, channel description, tags, and a Made-for-Kids-aware monetization checklist.</p>
+    <div class="facts">
+      <span class="fact">Runtime <b>~7:00</b></span>
+      <span class="fact">Audience <b>ages 3–7</b></span>
+      <span class="fact">Language <b>English</b></span>
+      <span class="fact">Made for Kids <b>Required</b></span>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <a href="#thumbnail">1. Thumbnail</a>
+    <a href="#description">2. Video description</a>
+    <a href="#channel">3. Channel description</a>
+    <a href="#tags">4. Tags</a>
+    <a href="#monetization">5. Monetization checklist</a>
+  </nav>
+
+  <section id="thumbnail">
+    <div class="sec-head">
+      <h2>1. Thumbnail</h2>
+      <span class="sec-num">1280×720</span>
+    </div>
+    <p class="lead">Generate the character art with Higgsfield, then add the title text separately in a simple editor (Canva, Photopea) — AI image models render clean text unreliably, so title cards are always done as a second pass in real thumbnail production.</p>
+    <div class="copy-box" id="box-thumb">Pixar/Disney 3D animation style, bright and warm. Wide golden-hour shot in Whisperwood Forest clearing. @Coco in the foreground, mid-bound toward camera, huge joyful grin, tail flying, orange fur glowing in the light — she is the clear focal point, largest and sharpest in frame. Behind and around her, the other seven friends — @Oliver, @Benny, @Bruno, @Luna, @Hazel, @Milo, @Pip — each visible once, no duplicates, all smiling and looking toward camera, warm group energy. Soft depth of blur behind the group, sparkling sunlight through leaves, colorful flowers. Bold, high-contrast lighting so faces read clearly at small thumbnail size. Leave open sky/foliage space in the upper third for title text to be added afterward. No text, no logos.</div>
+    <div class="notes">
+      <div class="note-row"><span class="mark">Title ideas</span> "Meet the Friends of Whisperwood Forest 🦊" · "Whisperwood Forest — Episode 0" · "8 New Friends to Meet!"</div>
+      <div class="note-row"><span class="mark">Why Coco up front</span> she's the series lead and the most expressive face — leading with one big clear expression reads better at small thumbnail sizes than an even group shot.</div>
+    </div>
+  </section>
+
+  <section id="description">
+    <div class="sec-head">
+      <h2>2. Video description</h2>
+      <span class="sec-num">YouTube · English</span>
+    </div>
+    <p class="lead">Timestamps double as YouTube chapters automatically once there are 3+, starting at 0:00 — so this list also becomes the video's chapter bar.</p>
+    <div class="copy-box" id="box-desc">Welcome to Whisperwood Forest! 🌿🦊 In this very first episode, meet all eight woodland friends — Coco the curious fox, wise Oliver the owl, shy Benny the bunny, big-hearted Bruno the bear, protective Luna the wolf, graceful Hazel the deer, careful Milo the hedgehog, and speedy Pip the squirrel!
+
+Whisperwood Forest is a gentle, heartwarming animated series for little ones (ages 3-7), full of wonder, kindness, and small adventures — no scares, no real danger, just good friends looking out for each other.
+
+🐾 MEET THE FRIENDS:
+0:00 - Welcome to Whisperwood Forest
+0:30 - Coco the Fox
+1:15 - Oliver the Owl
+2:00 - Benny the Bunny
+2:45 - Bruno the Bear
+3:30 - Luna the Wolf
+4:15 - Hazel the Deer
+5:00 - Milo the Hedgehog
+5:45 - Pip the Squirrel
+6:30 - All together!
+
+✨ New adventures are coming soon — subscribe and ring the bell so you never miss a visit to Whisperwood Forest!
+
+This series is brought to life with the help of AI animation and voice tools, crafted with care to tell gentle stories for young viewers.
+
+#WhisperwoodForest #KidsCartoon #ForKids #Preschool #KidsAnimation</div>
+  </section>
+
+  <section id="channel">
+    <div class="sec-head">
+      <h2>3. Channel description</h2>
+      <span class="sec-num">"About" tab</span>
+    </div>
+    <div class="copy-box" id="box-channel">Whisperwood Forest is a cozy animated series for little explorers ages 3-7.
+
+Every episode follows Coco the Fox and her seven woodland friends - Oliver the Owl, Benny the Bunny, Bruno the Bear, Luna the Wolf, Hazel the Deer, Milo the Hedgehog, and Pip the Squirrel - as they discover gentle life lessons through small forest adventures.
+
+Warm colors, soft music, kind hearts, and no scary surprises - just a safe, sunny corner of the internet for your little ones.
+
+All videos on this channel are made for kids.
+This series is made with the help of AI animation and voice tools.
+
+New adventures posted regularly - come visit Whisperwood Forest! 🦊🌲</div>
+  </section>
+
+  <section id="tags">
+    <div class="sec-head">
+      <h2>4. Tags</h2>
+      <span class="sec-num">video + channel keywords</span>
+    </div>
+    <p class="lead">Tags carry little SEO weight compared to title/description/thumbnail today, but they still help disambiguate the topic for YouTube's classifier — paste the whole line into the video's "Tags" field.</p>
+    <div class="chip-row">
+      <span class="chip">whisperwood forest</span>
+      <span class="chip">kids cartoon</span>
+      <span class="chip">animated series for kids</span>
+      <span class="chip">preschool cartoon</span>
+      <span class="chip">coco the fox</span>
+      <span class="chip">cartoon for toddlers</span>
+      <span class="chip">kids animation</span>
+      <span class="chip">forest animals cartoon</span>
+      <span class="chip">bedtime stories for kids</span>
+      <span class="chip">moral stories for kids</span>
+      <span class="chip">family friendly cartoon</span>
+      <span class="chip">new kids cartoon 2026</span>
+    </div>
+    <div class="copy-box" id="box-tags">whisperwood forest, kids cartoon, animated series for kids, preschool cartoon, coco the fox, cartoon for toddlers, kids animation, forest animals cartoon, bedtime stories for kids, cute animal cartoon, moral stories for kids, family friendly cartoon, animal friends cartoon, gentle cartoon for kids, cartoon for 3 year olds, cartoon for 4 year olds, new kids cartoon 2026</div>
+  </section>
+
+  <section id="monetization">
+    <div class="sec-head">
+      <h2>5. Monetization checklist</h2>
+      <span class="sec-num">YPP · COPPA</span>
+    </div>
+    <p class="lead">The channel can't turn on ads until it clears the YouTube Partner Program bar — but the Made-for-Kids designation below isn't optional paperwork, it's a legal requirement for content aimed at ages 3-7, and it changes what monetization looks like once you're in.</p>
+
+    <div class="checklist">
+      <div class="cl-group">
+        <div class="cl-group-title">Partner Program eligibility</div>
+        <div class="cl-group-note">All of these must be true before the "Monetization" tab even appears in Studio.</div>
+        <div class="cl-item"><span class="status required">Required</span> Channel is at least 30 days old</div>
+        <div class="cl-item"><span class="status required">Required</span> 1,000 subscribers</div>
+        <div class="cl-item"><span class="status required">Required</span> 4,000 public watch hours in the trailing 12 months, OR 10M Shorts views in the trailing 90 days</div>
+        <div class="cl-item"><span class="status required">Required</span> No active Community Guidelines strikes</div>
+        <div class="cl-item"><span class="status required">Required</span> AdSense account created and linked (Studio → Earn)</div>
+        <div class="cl-item"><span class="status required">Required</span> 2-Step Verification enabled on the Google account</div>
+        <div class="cl-item"><span class="status required">Required</span> Channel located in a supported YPP country</div>
+      </div>
+
+      <div class="cl-group">
+        <div class="cl-group-title">"Made for Kids" designation</div>
+        <div class="cl-group-note">Legally required (COPPA) for content directed at children — not a style choice. Set it at Studio → Settings → Channel as the default, then double-check it on every individual upload's Visibility step. Since April 2026 YouTube auto-detects under-labeled child content and can override your setting, so it's safest to self-designate correctly from the first upload.</div>
+        <div class="cl-item"><span class="status legal">Legally required</span> Set channel-level "Made for kids" default</div>
+        <div class="cl-item"><span class="status legal">Legally required</span> Confirm the audience setting on every video before publishing</div>
+        <div class="cl-item"><span class="status legal">Effect</span> Turns off personalized ads — only contextual ads can serve</div>
+        <div class="cl-item"><span class="status legal">Effect</span> Turns off comments, live chat, notifications bell, end screens, cards</div>
+        <div class="cl-item"><span class="status legal">Effect</span> Turns off Super Chat/Super Thanks and channel memberships</div>
+        <div class="stat-callout">
+          Expect roughly <strong>$1-3 RPM</strong> on a kids channel vs. <strong>$5-15</strong> on general content — contextual-only ads pay less. That gap is the accepted cost of being a compliant kids' channel, not something a setting can recover.
+        </div>
+      </div>
+
+      <div class="cl-group">
+        <div class="cl-group-title">AI content disclosure</div>
+        <div class="cl-group-note">YouTube's mandatory "altered or synthetic content" toggle targets realistic media that could pass for a real person, place, or event (deepfake-style content) — stylized 3D cartoon animation like this doesn't fall under it.</div>
+        <div class="cl-item"><span class="status optional">Not required</span> Flipping the synthetic-media disclosure toggle</div>
+        <div class="cl-item"><span class="status optional">Recommended</span> Keep the plain-language AI disclosure line in the description and channel "About" (already included above) — good transparency practice as detection rules keep expanding</div>
+      </div>
+
+      <div class="cl-group">
+        <div class="cl-group-title">Revenue beyond AdSense</div>
+        <div class="cl-group-note">Worth planning for, since kids-content ad RPM is capped by design.</div>
+        <div class="cl-item"><span class="status optional">Consider</span> Merch (Made-for-Kids channels can't use on-platform Memberships, so this has to live off-platform — a separate store)</div>
+        <div class="cl-item"><span class="status optional">Consider</span> Sponsorships with kid-safe, COPPA-compliant brands</div>
+        <div class="cl-item"><span class="status optional">Consider</span> Book/toy tie-ins once the audience is established</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Figures currency: August 2026. Rules change — re-check YouTube's official Partner Program and Made-for-Kids pages before relying on exact numbers.
+    <ul>
+      <li><a href="https://www.studiobinder.com/blog/youtube-monetization-requirements/" target="_blank" rel="noopener">StudioBinder — YouTube Monetization Requirements in 2026</a></li>
+      <li><a href="https://www.auditsocials.com/blog/youtube-made-for-kids-ad-restrictions-update-2026-coppa-expansion-limited-ads-mode-family-friendly-compliance" target="_blank" rel="noopener">AuditSocials — Made for Kids Ads 2026: COPPA + Limited Ads Update</a></li>
+      <li><a href="https://vidiq.com/blog/post/make-money-kids-youtube-channel/" target="_blank" rel="noopener">vidIQ — Made for Kids YouTube: How to Make Money in 2026</a></li>
+    </ul>
+  </footer>
+</div>
+
+<script>
+  function wireCopy(boxId) {
+    const box = document.getElementById(boxId);
+    if (!box) return;
+    const btn = document.createElement("button");
+    btn.className = "copy";
+    btn.type = "button";
+    btn.textContent = "Copy";
+    btn.addEventListener("click", () => {
+      const markCopied = () => {
+        btn.textContent = "Copied";
+        btn.classList.add("copied");
+        setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("copied"); }, 1400);
+      };
+      const fallbackCopy = () => {
+        const ta = document.createElement("textarea");
+        ta.value = box.textContent;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        try {
+          document.execCommand("copy");
+          markCopied();
+        } catch (e) {
+          btn.textContent = "Copy failed";
+          setTimeout(() => { btn.textContent = "Copy"; }, 1400);
+        }
+        document.body.removeChild(ta);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(box.textContent).then(markCopied, fallbackCopy);
+      } else {
+        fallbackCopy();
+      }
+    });
+    box.appendChild(btn);
+  }
+
+  ["box-thumb", "box-desc", "box-channel", "box-tags"].forEach(wireCopy);
+</script>
