@@ -1,0 +1,253 @@
+<title>Whisperwood Forest — Episode 8 Director Prompt</title>
+<style>
+  :root {
+    --bg: #f5f1e3;
+    --surface: #ece3cd;
+    --surface-raised: #fffcf5;
+    --border: #ddcfa9;
+    --ink: #241f14;
+    --ink-soft: #6e6247;
+    --accent: #93641f;
+    --optional: #3f6b52;
+    --mono-bg: #211b10;
+    --mono-ink: #f1e9d6;
+    --focus: #3b6bd6;
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #17130c;
+    --surface: #211b12;
+    --surface-raised: #272016;
+    --border: #3b3120;
+    --ink: #f1e9d6;
+    --ink-soft: #bcae8c;
+    --accent: #e0b25a;
+    --optional: #8fc0a0;
+    --mono-bg: #100d08;
+    --mono-ink: #ecdfc2;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17130c;
+      --surface: #211b12;
+      --surface-raised: #272016;
+      --border: #3b3120;
+      --ink: #f1e9d6;
+      --ink-soft: #bcae8c;
+      --accent: #e0b25a;
+      --optional: #8fc0a0;
+      --mono-bg: #100d08;
+      --mono-ink: #ecdfc2;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0 0 4rem;
+  }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 0;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    font-weight: 700;
+    font-size: clamp(1.7rem, 4.2vw, 2.3rem);
+    text-wrap: balance;
+    letter-spacing: -0.005em;
+    margin: 0 0 0.6rem;
+  }
+
+  .subtitle {
+    color: var(--ink-soft);
+    font-size: 0.97rem;
+    max-width: 62ch;
+    margin: 0 0 1.75rem;
+  }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .fact {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+
+  .fact b { color: var(--ink); font-weight: 700; }
+
+  .lead {
+    color: var(--ink-soft);
+    font-size: 0.93rem;
+    margin: 0 0 1rem;
+  }
+
+  .copy-box {
+    position: relative;
+    background: var(--mono-bg);
+    color: var(--mono-ink);
+    border-radius: 10px;
+    padding: 1rem 3.4rem 1rem 1.1rem;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 0.83rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .copy-box .scene-num {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  button.copy {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--mono-ink);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.32rem 0.65rem;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  button.copy:hover { background: rgba(255,255,255,0.16); }
+  button.copy:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  button.copy.copied { background: var(--optional); border-color: var(--optional); color: #0e1710; }
+
+  @media (prefers-reduced-motion: reduce) {
+    button.copy { transition: none; }
+  }
+
+  footer {
+    max-width: 780px;
+    margin: 2.5rem auto 0;
+    padding: 1.5rem 1.25rem 0;
+    border-top: 1px solid var(--border);
+    color: var(--ink-soft);
+    font-size: 0.78rem;
+  }
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">Whisperwood Forest &middot; Episode 8 &middot; OpenArt Director prompt</div>
+  <h1>Ki ér előbb? <span style="color: var(--ink-soft); font-weight: 400;">/ Who Gets There First?</span></h1>
+  <p class="subtitle">One combined, scene-by-scene prompt for the whole episode — paste the whole box below directly into OpenArt.ai's Director field.</p>
+  <div class="facts">
+    <span class="fact">16 scenes</span>
+    <span class="fact">~4:00 total</span>
+    <span class="fact">Pip + Coco</span>
+  </div>
+
+  <p class="lead">Click the box (or the Copy button) to copy the entire prompt to your clipboard.</p>
+  <div class="copy-box" id="box-prompt">WHISPERWOOD FOREST — EPISODE 8: "WHO GETS THERE FIRST?"
+Pixar/Disney 3D animation style throughout, 16:9, warm consistent color palette. Characters: Pip (fast-talking red squirrel), Coco (curious orange fox, series lead). Supporting cameos: Hazel (deer, background only), Bruno (bear, background only). Lesson: it was never about who got there first — it's about having someone ridiculous to run wild with. Comedic, physical-slapstick tone. No scares, no real danger — only mild mishaps and laughs, ages 3-7 audience. Ambient forest sound throughout, no background music unless noted.
+
+SCENE 1 (intro, pre-roll): Pip zips into frame at the edge of Whisperwood Forest and skids to a stop facing the camera directly, eyes bright, tail flicking with energy, speaking rapidly: "PipPipPip, it's me, Pip! Today's story is called 'Who Gets There First?' Trust me, you don't want to blink!" Only Pip's voice plays. Ambient forest sound only, no music.
+
+SCENE 2 (0:00): Establishing shot of a wide, sunny forest clearing at bright morning hour, dew still sparkling on the grass. Camera drifts slowly across the open space, birds calling, a light breeze moving the wildflowers. No characters visible. Narration plays over: "Some mornings in Whisperwood Forest start quietly. This one didn't stay quiet for long."
+
+SCENE 3 (0:15): Pip is mid-climb on a tree trunk at one edge of the clearing when something catches his eye across the grass — a perfectly round, opal-shimmering stone in a patch of sunlight, throwing little rainbows of light. Eyes wide, speaking: "Whoa — whoa whoa whoa, is that... that's MINE, calling it, mine!"
+
+SCENE 4 (0:30): Coco is sniffing around a bush at the opposite edge of the same clearing when the same glimmer of light catches her eye — the round, opal-shimmering stone sparkling across the grass. Ears perk straight up, speaking: "Ooh! Shiny! That's going in MY collection!"
+
+SCENE 5 (0:45): Wide shot of the clearing: Pip and Coco launch into a full sprint from opposite sides, straight toward the shimmering stone in the middle, both a blur of motion, dust and grass kicking up behind them. Playful, frantic energy. No dialogue.
+
+SCENE 6 (1:00): Pip springs up into the trees, leaping branch to branch at high speed, taking a wild shortcut above the forest floor, calling out gleefully: "Trees are basically just very tall shortcuts — watch this!"
+
+SCENE 7 (1:15): Coco spots a muddy slope and takes it at full speed, sliding downhill on her belly, mud splattering everywhere, completely losing control, yelping: "Mud is basically just a very fast floor — wait, why am I sliding—"
+
+SCENE 8 (1:30): Pip leaps down from the trees right as Coco, still muddy, comes barreling past — both crash straight through a tall, carefully stacked tower of flowers Hazel had been building nearby, petals exploding into the air in every direction. Neither slows down. Hazel visible only in the background, frozen mid-stack, watching them go. No dialogue.
+
+SCENE 9 (1:45): Pip and Coco, still sprinting neck and neck, both leap clean over Bruno's huge sleeping shape sprawled across the path, petals and mud still flying off them. Bruno barely stirs, one eye cracking open just enough to notice, then closing again. No dialogue.
+
+SCENE 10 (2:00): Pip and Coco run side by side now, both breathless but grinning, glancing sideways at each other competitively as the stone comes into view just ahead. Pip: "Slow down, slowpoke, I've basically already won!" Coco, firing back: "You're literally still behind me, Pip!"
+
+SCENE 11 (2:15): Pip and Coco both dive for the shimmering stone at the exact same instant. Pip, mid-dive: "Wait, that's—" Coco, diving too: "—MY rock—" — then they collide head-on, tumbling into a tangled heap right where the stone was, both cut off by the crash.
+
+SCENE 12 (2:30): From beneath the tangled heap of Pip and Coco, the opal-shimmering stone pops loose and rolls free, picking up speed down a gentle slope toward the sound of running water. Both scramble up, wide-eyed, and take off after it. No dialogue.
+
+SCENE 13 (2:45): The stone rolls off the bank and plops into the forest stream with a splash. Pip and Coco arrive right behind it. Pip: "It's getting away!" Coco, diving in right after him: "Not on my watch!" Both dive into the water, sending splashes everywhere.
+
+SCENE 14 (3:00): Pip and Coco sit dripping wet on the sunny streambank, muddy, petal-covered, and completely out of breath — and now, instead of reaching for the stone between them, they start gently tossing it back and forth to each other, laughing. Warm, happy, silly mood. No dialogue on screen (narration plays over: "Turns out, once you actually catch the thing you're racing for... there's not much to do with it alone. So Pip and Coco found something better to do with it — together.")
+
+SCENE 15 (3:15): Pip turns to face the camera, soggy and grinning, catching the stone one more time, speaking: "There's always something new happening here in Whisperwood Forest — come back soon and see what we get up to next!" Coco visible beside him, laughing.
+
+SCENE 16 (3:30): Coco stands facing the camera directly in a warm, sunny spot, tail wagging happily, big friendly smile, speaking warmly and directly to the viewer: "If you had fun with us today, ask a grown-up to help you hit that subscribe button, so you never miss our next adventure here in Whisperwood Forest!"
+
+Continuous score arc: bright and playful (scenes 2-5) → fast, comedic and frantic through the shortcuts, flower tower, and jumping over Bruno (6-10) → a big percussive hit for the collision (11) → quick chase beat (12) → splashy and energetic for the stream dive (13) → warm and silly for the resolution (14) → bright and warm through the close and subscribe CTA (15-16).</div>
+
+  <footer>episodes/episode-8-who-first-prompts.md &middot; Whisperwood Forest &middot; Episode 8</footer>
+</div>
+
+<script>
+  (function () {
+    var box = document.getElementById('box-prompt');
+    if (!box) return;
+    var btn = document.createElement('button');
+    btn.className = 'copy';
+    btn.type = 'button';
+    btn.textContent = 'Copy';
+    btn.addEventListener('click', function () {
+      var markCopied = function () {
+        btn.textContent = 'Copied';
+        btn.classList.add('copied');
+        setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1400);
+      };
+      var fallbackCopy = function () {
+        var ta = document.createElement('textarea');
+        ta.value = box.textContent;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        try {
+          document.execCommand('copy');
+          markCopied();
+        } catch (e) {
+          btn.textContent = 'Copy failed';
+          setTimeout(function () { btn.textContent = 'Copy'; }, 1400);
+        }
+        document.body.removeChild(ta);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(box.textContent).then(markCopied, fallbackCopy);
+      } else {
+        fallbackCopy();
+      }
+    });
+    box.appendChild(btn);
+  })();
+</script>
