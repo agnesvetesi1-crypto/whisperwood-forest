@@ -1,0 +1,357 @@
+<title>Whisperwood Forest — Narration &amp; Music Prompts</title>
+<style>
+  :root {
+    --bg: #f5f1e3;
+    --surface: #ece3cd;
+    --surface-raised: #fffcf5;
+    --border: #ddcfa9;
+    --ink: #241f14;
+    --ink-soft: #6e6247;
+    --accent: #93641f;
+    --accent-strong: #74501a;
+    --narrator: #5b4a8a;
+    --narrator-soft: #e3ddf1;
+    --music: #3f6b52;
+    --music-soft: #dde8e0;
+    --mono-bg: #211b10;
+    --mono-ink: #f1e9d6;
+    --focus: #3b6bd6;
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #17130c;
+    --surface: #211b12;
+    --surface-raised: #272016;
+    --border: #3b3120;
+    --ink: #f1e9d6;
+    --ink-soft: #bcae8c;
+    --accent: #e0b25a;
+    --accent-strong: #eec37a;
+    --narrator: #b7a3e0;
+    --narrator-soft: #2a2440;
+    --music: #8fc0a0;
+    --music-soft: #1e2c22;
+    --mono-bg: #100d08;
+    --mono-ink: #ecdfc2;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17130c;
+      --surface: #211b12;
+      --surface-raised: #272016;
+      --border: #3b3120;
+      --ink: #f1e9d6;
+      --ink-soft: #bcae8c;
+      --accent: #e0b25a;
+      --accent-strong: #eec37a;
+      --narrator: #b7a3e0;
+      --narrator-soft: #2a2440;
+      --music: #8fc0a0;
+      --music-soft: #1e2c22;
+      --mono-bg: #100d08;
+      --mono-ink: #ecdfc2;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0 0 4rem;
+  }
+
+  .wrap { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.25rem 0; }
+
+  header.top {
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.5rem;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    font-weight: 700;
+    font-size: clamp(1.7rem, 4.2vw, 2.3rem);
+    text-wrap: balance;
+    margin: 0 0 0.6rem;
+  }
+
+  .subtitle { color: var(--ink-soft); font-size: 0.97rem; max-width: 62ch; margin: 0; }
+
+  nav.toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.85rem;
+  }
+
+  nav.toc a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid transparent; }
+  nav.toc a:hover { border-bottom-color: var(--accent); color: var(--ink); }
+
+  .episode {
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 1.5rem;
+  }
+
+  .episode:first-of-type { border-top: none; padding-top: 0; }
+
+  .episode h2 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 1.5rem;
+    margin: 0 0 0.3rem;
+  }
+
+  .episode .runtime {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.4rem;
+  }
+
+  .subsec-head {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.6rem 0 0.9rem;
+  }
+
+  .subsec-head .pill {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 0.18rem 0.55rem;
+  }
+
+  .pill.narrator { background: var(--narrator-soft); color: var(--narrator); }
+  .pill.music { background: var(--music-soft); color: var(--music); }
+
+  .subsec-head h3 { font-size: 1rem; margin: 0; font-weight: 700; }
+
+  .copy-box {
+    position: relative;
+    background: var(--mono-bg);
+    color: var(--mono-ink);
+    border-radius: 10px;
+    padding: 0.85rem 3.2rem 0.85rem 1.05rem;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 0.83rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 100%;
+    overflow-x: auto;
+    margin-bottom: 0.6rem;
+  }
+
+  .tc {
+    display: block;
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 0.74rem;
+    color: var(--accent-strong);
+    font-weight: 600;
+    margin: 0 0 0.3rem;
+  }
+
+  button.copy {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--mono-ink);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  button.copy:hover { background: rgba(255,255,255,0.16); }
+  button.copy:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  button.copy.copied { background: var(--music); border-color: var(--music); color: #0e1710; }
+
+  @media (prefers-reduced-motion: reduce) { button.copy { transition: none; } }
+
+  footer {
+    max-width: 820px;
+    margin: 2.5rem auto 0;
+    padding: 1.5rem 1.25rem 0;
+    border-top: 1px solid var(--border);
+    color: var(--ink-soft);
+    font-size: 0.78rem;
+  }
+</style>
+
+<div class="wrap">
+<header class="top">
+<div class="eyebrow">Whisperwood Forest &middot; Narration &amp; Music Prompt Kit</div>
+<h1>Narráció &amp; zene promptok — 1&ndash;8. rész</h1>
+<p class="subtitle">A 0. rész narrációja és zenéje már kész. Ez az oldal a hátralévő részek narrátor sorait (vidIQ <code>vidiq_voiceover_generate</code>, hang: Lily, voiceId <code>pFZP5JQG7iQjIQuC4Bku</code>) és zenei szakasz-promptjait (vidIQ <code>vidiq_generate_music</code>) gyűjti össze, kattints-a-másoláshoz.</p>
+</header>
+<nav class="toc">
+<a href="#ep1">1. rész</a>
+<a href="#ep2">2. rész</a>
+<a href="#ep3">3. rész</a>
+<a href="#ep4">4. rész</a>
+<a href="#ep5">5. rész</a>
+<a href="#ep6">6. rész</a>
+<a href="#ep7">7. rész</a>
+<a href="#ep8">8. rész</a>
+</nav>
+<section class="episode" id="ep1">
+<h2>Episode 1 — "Coco and the Little Butterfly"</h2>
+<div class="runtime">Runtime ~3:45</div>
+<div class="subsec-head"><span class="pill narrator">Narráció</span><h3>Narrátor sorok (Lily)</h3></div>
+<span class="tc">klip @ 0:00</span><div class="copy-box">Deep in the heart of the forest, where the sunlight dances through the leaves and the stream sings its gentle song... lies a very special place. This is Whisperwood Forest. And today, something wonderful is about to happen.</div>
+<span class="tc">klip @ 0:30</span><div class="copy-box">And so the chase began! The butterfly fluttered from flower to flower, and Coco followed — jumping, running, and tumbling through the forest.</div>
+<span class="tc">klip @ 1:45</span><div class="copy-box">Coco wasn't so sure about that. But she trusted Oliver. She always did.</div>
+<span class="tc">klip @ 2:30</span><div class="copy-box">And then — something magical happened.</div>
+<span class="tc">klip @ 3:00</span><div class="copy-box">That day, Coco learned something she would never forget. Some beautiful things are meant to stay free. And when we let them be free... they share their magic with everyone.</div>
+<div class="subsec-head"><span class="pill music">Zene</span><h3>Zenei szakasz-promptok (generate_music)</h3></div>
+<span class="tc">A · clips 1–4</span><div class="copy-box">Whimsical Pixar-style children's orchestral score, curious and gentle opening on soft strings and woodwinds, building into a playful, bouncy chase with plucked pizzicato strings and light percussion, warm and adventurous, moderate-to-upbeat tempo, instrumental.</div>
+<span class="tc">B · clips 5–10</span><div class="copy-box">Warm, tender children's orchestral underscore, calm piano and soft strings for a gentle conversation, swelling gradually into a wondrous, magical atmosphere with harp glissando and light chimes, slow to moderate tempo, instrumental.</div>
+<span class="tc">C · clips 11–15</span><div class="copy-box">Delicate music box and soft solo strings dropping to near silence for a quiet magical moment, then blooming into a warm, tender, heartfelt children's orchestral theme for the closing scenes, gentle harp, slow tempo, instrumental.</div>
+</section>
+<section class="episode" id="ep2">
+<h2>Episode 2 — "Pip Bocsánatot Kér" ("Pip Says Sorry")</h2>
+<div class="runtime">Runtime ~3:45</div>
+<div class="subsec-head"><span class="pill narrator">Narráció</span><h3>Narrátor sorok (Lily)</h3></div>
+<span class="tc">klip @ 0:00</span><div class="copy-box">Every day in Whisperwood Forest is a little different — today starts with someone in an awfully big hurry.</div>
+<span class="tc">klip @ 3:00</span><div class="copy-box">Pip learned that sorry is just the beginning — the rest is showing up, and helping put things right.</div>
+<div class="subsec-head"><span class="pill music">Zene</span><h3>Zenei szakasz-promptok (generate_music)</h3></div>
+<span class="tc">A · clips 1–4</span><div class="copy-box">Light, warm, gently bouncy children's orchestral score — peaceful morning strings shifting into Pip's rushing, energetic pizzicato energy, ending on a sudden soft percussive stop, moderate-to-upbeat tempo, instrumental.</div>
+<span class="tc">B · clips 5–8</span><div class="copy-box">Tender, melancholic children's underscore, slow cello and piano, quietly sad and reflective mood for discovery and grief, slow tempo, instrumental.</div>
+<span class="tc">C · clips 9–15</span><div class="copy-box">Warm, hopeful children's orchestral theme building steadily from tentative strings into a full, bright, triumphant finale for reconciliation and rebuilding together, instrumental.</div>
+</section>
+<section class="episode" id="ep3">
+<h2>Episode 3 — "Benny és a Nagy Zivatar" ("Benny and the Big Storm")</h2>
+<div class="runtime">Runtime ~3:45</div>
+<div class="subsec-head"><span class="pill narrator">Narráció</span><h3>Narrátor sorok (Lily)</h3></div>
+<span class="tc">klip @ 0:00</span><div class="copy-box">Some afternoons in Whisperwood Forest turn without warning. Today, the wind had a different kind of whisper — one that meant a storm was coming.</div>
+<span class="tc">klip @ 0:45</span><div class="copy-box">Deep underground, Benny was safe. But safe didn't feel very brave. It just felt very, very alone.</div>
+<span class="tc">klip @ 2:30</span><div class="copy-box">So they sat, and they waited, and every time the sky rumbled, they flinched together instead of alone. Somehow, that made all the difference.</div>
+<span class="tc">klip @ 3:00</span><div class="copy-box">Benny learned something that day that even Bruno needed reminding of sometimes: being brave was never about not being scared. It was about staying — and it was always a little easier together.</div>
+<div class="subsec-head"><span class="pill music">Zene</span><h3>Zenei szakasz-promptok (generate_music)</h3></div>
+<span class="tc">A · clips 1–4</span><div class="copy-box">Uneasy but warm children's orchestral score, tense tremolo strings and low woodwinds building anticipation, distant rumbling percussion suggesting an approaching storm, moderate tempo, instrumental.</div>
+<span class="tc">B · clips 5–9</span><div class="copy-box">Tender, warm children's underscore with a gentle undercurrent of tension, soft cello and piano, understated percussion mimicking rain, slow-to-moderate tempo, instrumental.</div>
+<span class="tc">C · clips 10–15</span><div class="copy-box">Playful, comedic pizzicato strings and light woodwinds for a giggly moment, settling into calm tender piano and strings, then swelling into a bright, warm, triumphant children's orchestral finale, instrumental.</div>
+</section>
+<section class="episode" id="ep4">
+<h2>Episode 4 — "Luna Sosem Áll Meg" ("Luna Never Stops")</h2>
+<div class="runtime">Runtime ~3:45</div>
+<div class="subsec-head"><span class="pill narrator">Narráció</span><h3>Narrátor sorok (Lily)</h3></div>
+<span class="tc">klip @ 0:00</span><div class="copy-box">Some afternoons in Whisperwood Forest are just for playing. But even on the happiest days... someone is always keeping watch.</div>
+<span class="tc">klip @ 0:15</span><div class="copy-box">Luna always stood a little apart. Watching the paths. Listening to the wind. Just in case.</div>
+<span class="tc">klip @ 1:30</span><div class="copy-box">So Hazel didn't argue. She just... started making something.</div>
+<span class="tc">klip @ 3:00</span><div class="copy-box">That day, Luna learned something new: watching over everyone else didn't mean she couldn't be watched over too. And for five whole minutes, she let herself just... be.</div>
+<div class="subsec-head"><span class="pill music">Zene</span><h3>Zenei szakasz-promptok (generate_music)</h3></div>
+<span class="tc">A · clips 1–3</span><div class="copy-box">Warm but slightly distant playful children's orchestral music, light strings and woodwinds, shifting into a steady, watchful, gently protective mood with sustained low strings, moderate tempo, instrumental.</div>
+<span class="tc">B · clips 4–8</span><div class="copy-box">Gentle, curious children's underscore, soft plucked strings and woodwind melody, easing into a patient, tender, soft piano and strings mood, slow tempo, instrumental.</div>
+<span class="tc">C · clips 9–15</span><div class="copy-box">Tender, vulnerable children's orchestral theme on solo strings and piano, swelling into warm, settled harmony, then bright and joyful for the closing scenes, gentle harp accents, instrumental.</div>
+</section>
+<section class="episode" id="ep5">
+<h2>Episode 5 — "A Titkos Ösvény" ("The Secret Shortcut")</h2>
+<div class="runtime">Runtime ~3:45</div>
+<div class="subsec-head"><span class="pill narrator">Narráció</span><h3>Narrátor sorok (Lily)</h3></div>
+<span class="tc">klip @ 0:00</span><div class="copy-box">Some days in Whisperwood Forest call for a little adventure — especially when someone thinks they've found a shortcut.</div>
+<span class="tc">klip @ 3:00</span><div class="copy-box">Pip learned that being sure isn't the same as being right. And Benny learned that his quiet voice was worth speaking up — the moment someone finally listened.</div>
+<div class="subsec-head"><span class="pill music">Zene</span><h3>Zenei szakasz-promptok (generate_music)</h3></div>
+<span class="tc">A · clips 1–5</span><div class="copy-box">Bright, eager, adventurous children's orchestral score, upbeat plucked strings, playful woodwinds, energetic moderate-to-fast tempo, instrumental.</div>
+<span class="tc">B · clips 6–10</span><div class="copy-box">Tense but playful children's underscore, uncertain tremolo strings, mysterious woodwind textures, moderate tempo suggesting getting lost in a forest, instrumental.</div>
+<span class="tc">C · clips 11–15</span><div class="copy-box">Warm, settling children's orchestral theme, gentle strings and piano building into a bright, triumphant, joyful finale, instrumental.</div>
+</section>
+<section class="episode" id="ep6">
+<h2>Episode 6 — "A Bogyós Titok" ("The Berry Secret")</h2>
+<div class="runtime">Runtime ~4:00 (incl. episode-intro pre-roll)</div>
+<div class="subsec-head"><span class="pill narrator">Narráció</span><h3>Narrátor sorok (Lily)</h3></div>
+<span class="tc">klip @ 0:15</span><div class="copy-box">Some mornings in Whisperwood Forest hide a little secret — if you know exactly where to look.</div>
+<span class="tc">klip @ 1:00</span><div class="copy-box">So Bruno feasted, and feasted, and feasted some more. It was delicious. It was also... a little quiet.</div>
+<span class="tc">klip @ 3:15</span><div class="copy-box">Bruno learned something sweet that day: good things don't get smaller when you share them. Somehow, they just get better.</div>
+<div class="subsec-head"><span class="pill music">Zene</span><h3>Zenei szakasz-promptok (generate_music)</h3></div>
+<span class="tc">A · clips 1–4</span><div class="copy-box">Playful, curious children's orchestral score with light pizzicato strings and woodwinds for a forest discovery, shifting into a warm but quietly wistful solo cello and piano melody, instrumental.</div>
+<span class="tc">B · clips 5–10</span><div class="copy-box">Light, eager children's underscore with quick playful strings, building into an awkward, gently tense moment with soft suspended strings and hesitant woodwinds, moderate tempo, instrumental.</div>
+<span class="tc">C · clips 11–16</span><div class="copy-box">Warm, joyful children's orchestral theme with bouncy strings and woodwinds for a shared, laughing moment, settling into content, warm harmony, then bright and cheerful for the close, instrumental.</div>
+</section>
+<section class="episode" id="ep7">
+<h2>Episode 7 — "Az Ingó Palló" ("The Wobbly Plank")</h2>
+<div class="runtime">Runtime ~4:00 (incl. episode-intro pre-roll)</div>
+<div class="subsec-head"><span class="pill narrator">Narráció</span><h3>Narrátor sorok (Lily)</h3></div>
+<span class="tc">klip @ 0:15</span><div class="copy-box">Some errands in Whisperwood Forest take you somewhere new — especially when the path gets a little tricky.</div>
+<span class="tc">klip @ 3:15</span><div class="copy-box">Milo learned that day that being scared doesn't mean you can't be brave. Having someone steady beside you can make even the scariest step feel possible.</div>
+<div class="subsec-head"><span class="pill music">Zene</span><h3>Zenei szakasz-promptok (generate_music)</h3></div>
+<span class="tc">A · clips 1–3</span><div class="copy-box">Warm, everyday children's orchestral score, gentle strings and woodwinds, moderate tempo, adventurous but calm, instrumental.</div>
+<span class="tc">B · clips 4–5</span><div class="copy-box">Gentle, encouraging children's underscore, soft piano and warm strings, slow-to-moderate tempo, reassuring mood, instrumental.</div>
+<span class="tc">C · clips 6–9</span><div class="copy-box">Brief, tense tremolo strings and a sudden percussive hit for a startling moment, quickly resolving into warm, steadying strings and piano for a reassuring rescue, instrumental.</div>
+<span class="tc">D · clips 10–16</span><div class="copy-box">Settled, proud children's orchestral theme with warm strings, swelling into a bright, warm, joyful finale for the close and subscribe CTA, instrumental.</div>
+</section>
+<section class="episode" id="ep8">
+<h2>Episode 8 — "Ki ér előbb?" ("Who Gets There First?")</h2>
+<div class="runtime">Runtime ~4:00 (incl. episode-intro pre-roll)</div>
+<div class="subsec-head"><span class="pill narrator">Narráció</span><h3>Narrátor sorok (Lily)</h3></div>
+<span class="tc">klip @ 0:15</span><div class="copy-box">Some mornings in Whisperwood Forest start quietly. This one didn't stay quiet for long.</div>
+<span class="tc">klip @ 3:15</span><div class="copy-box">Turns out, once you actually catch the thing you're racing for... there's not much to do with it alone. So Pip and Coco found something better to do with it — together.</div>
+<div class="subsec-head"><span class="pill music">Zene</span><h3>Zenei szakasz-promptok (generate_music)</h3></div>
+<span class="tc">A · clips 1–4</span><div class="copy-box">Bright, playful, comedic children's orchestral score, bouncy pizzicato strings, energetic light percussion, fast-ish tempo, instrumental.</div>
+<span class="tc">B · clips 5–9</span><div class="copy-box">Fast, frantic, comedic chase music, playful bassoon and pizzicato strings, snappy percussion, slapstick energetic tempo, instrumental.</div>
+<span class="tc">C · clips 10–13</span><div class="copy-box">A big comedic percussive hit followed by a quick playful chase cue, then splashy, energetic strings and light percussion mimicking water, instrumental.</div>
+<span class="tc">D · clips 14–16</span><div class="copy-box">Warm, silly, cheerful children's orchestral theme, gentle bouncy strings settling into a bright, warm finale for the close and subscribe CTA, instrumental.</div>
+</section>
+<footer>Whisperwood Forest &middot; a promptok forrása az egyes epizódok <code>episodes/episode-N-*.md</code> f&aacute;jljai.</footer>
+</div>
+
+<script>
+  (function () {
+    function wireCopy(box) {
+      var text = box.textContent.trim();
+      var btn = document.createElement('button');
+      btn.className = 'copy';
+      btn.type = 'button';
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', function () {
+        var markCopied = function () {
+          btn.textContent = 'Copied';
+          btn.classList.add('copied');
+          setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1400);
+        };
+        var fallbackCopy = function () {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          try { document.execCommand('copy'); markCopied(); }
+          catch (e) { btn.textContent = 'Copy failed'; setTimeout(function () { btn.textContent = 'Copy'; }, 1400); }
+          document.body.removeChild(ta);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(markCopied, fallbackCopy);
+        } else {
+          fallbackCopy();
+        }
+      });
+      box.appendChild(btn);
+    }
+    document.querySelectorAll('.copy-box').forEach(wireCopy);
+  })();
+</script>
