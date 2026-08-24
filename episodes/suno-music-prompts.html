@@ -1,0 +1,219 @@
+<title>Whisperwood Forest — Suno Music Prompts</title>
+<style>
+  :root {
+    --bg: #f5f1e3; --surface: #ece3cd; --border: #ddcfa9; --ink: #241f14; --ink-soft: #6e6247;
+    --accent: #93641f; --accent-strong: #74501a;
+    --mono-bg: #211b10; --mono-ink: #f1e9d6; --focus: #3b6bd6; --ok: #3f6b52;
+  }
+  :root[data-theme="dark"] {
+    --bg: #17130c; --surface: #211b12; --border: #3b3120; --ink: #f1e9d6; --ink-soft: #bcae8c;
+    --accent: #e0b25a; --accent-strong: #eec37a; --mono-bg: #100d08; --mono-ink: #ecdfc2; --ok: #8fc0a0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17130c; --surface: #211b12; --border: #3b3120; --ink: #f1e9d6; --ink-soft: #bcae8c;
+      --accent: #e0b25a; --accent-strong: #eec37a; --mono-bg: #100d08; --mono-ink: #ecdfc2; --ok: #8fc0a0;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; line-height: 1.6; padding: 0 0 4rem; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.25rem 0; }
+  header.top { padding-bottom: 1.75rem; border-bottom: 1px solid var(--border); margin-bottom: 1.5rem; }
+  .eyebrow { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 0.6rem; }
+  h1 { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif; font-weight: 700; font-size: clamp(1.7rem, 4.2vw, 2.3rem); text-wrap: balance; margin: 0 0 0.6rem; }
+  .subtitle { color: var(--ink-soft); font-size: 0.97rem; max-width: 64ch; margin: 0; }
+  .howto { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin: 1.5rem 0 2rem; font-size: 0.9rem; color: var(--ink-soft); }
+  .howto strong { color: var(--ink); }
+  nav.toc { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; margin-bottom: 2.5rem; font-size: 0.85rem; }
+  nav.toc a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid transparent; }
+  nav.toc a:hover { border-bottom-color: var(--accent); color: var(--ink); }
+  .episode { margin-bottom: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); scroll-margin-top: 1.5rem; }
+  .episode:first-of-type { border-top: none; padding-top: 0; }
+  .episode h2 { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif; font-size: 1.4rem; margin: 0 0 0.3rem; }
+  .episode .runtime { font-family: ui-monospace, "SF Mono", Consolas, monospace; font-size: 0.78rem; color: var(--ink-soft); margin-bottom: 1.4rem; }
+  .section-card { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 1rem; overflow: hidden; }
+  .section-head { display: flex; justify-content: space-between; align-items: baseline; padding: 0.65rem 1rem; background: var(--surface); font-size: 0.85rem; }
+  .section-head .range { font-family: ui-monospace, "SF Mono", Consolas, monospace; color: var(--accent-strong); font-weight: 700; }
+  .section-head .title { color: var(--ink-soft); }
+  .copy-box { position: relative; background: var(--mono-bg); color: var(--mono-ink); padding: 0.85rem 3.2rem 0.85rem 1.05rem; font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace; font-size: 0.83rem; line-height: 1.6; white-space: pre-wrap; word-break: break-word; }
+  button.copy { position: absolute; top: 0.6rem; right: 0.6rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: var(--mono-ink); font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.6rem; border-radius: 7px; cursor: pointer; transition: background 0.15s ease; }
+  button.copy:hover { background: rgba(255,255,255,0.16); }
+  button.copy:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  button.copy.copied { background: var(--ok); border-color: var(--ok); color: #0e1710; }
+  @media (prefers-reduced-motion: reduce) { button.copy { transition: none; } }
+  footer { max-width: 820px; margin: 2.5rem auto 0; padding: 1.5rem 1.25rem 0; border-top: 1px solid var(--border); color: var(--ink-soft); font-size: 0.78rem; }
+</style>
+<div class="wrap">
+<header class="top">
+<div class="eyebrow">Whisperwood Forest &middot; Suno Music Prompts</div>
+<h1>Zene promptok Sunohoz — 1, 3&ndash;8. rész</h1>
+<p class="subtitle">A hiányzó epizódok zenéjének Suno-stílusú (vessző-tag) promptjai, hangulati szakaszonként. A 0. és 2. rész zenéje már kész, azok kimaradtak.</p>
+</header>
+<div class="howto"><strong>Suno beállítás:</strong> Custom Mode &rarr; kapcsold be az <strong>Instrumental</strong> kapcsolót (a "lyrics" mező maradjon üresen) &rarr; a promptot másold a <strong>Style of Music</strong> mezőbe &rarr; adj egy címet is (pl. "Whisperwood Forest — Ep3 Section A"). Szakaszonként generálj külön dalt, majd fésüld össze őket (pl. crossfade-eléssel) egy folyamatos zenei sávvá, ugyanúgy, ahogy a 0. és 2. részt is összeraktuk.</div>
+<nav class="toc">
+<a href="#ep1">1. rész</a>
+<a href="#ep3">3. rész</a>
+<a href="#ep4">4. rész</a>
+<a href="#ep5">5. rész</a>
+<a href="#ep6">6. rész</a>
+<a href="#ep7">7. rész</a>
+<a href="#ep8">8. rész</a>
+</nav>
+<section class="episode" id="ep1">
+<h2>Episode 1 — "Coco and the Little Butterfly"</h2>
+<div class="runtime">Runtime ~3:45</div>
+<div class="section-card">
+<div class="section-head"><span class="range">A · clips 1–4</span><span class="title">Whimsical Pixar-style children's animation score</span></div>
+<div class="copy-box">children's animation score, whimsical, curious, gentle opening, playful bouncy chase, soft strings, woodwinds, pizzicato strings, light percussion, warm, adventurous, moderate-upbeat tempo, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">B · clips 5–10</span><span class="title">Warm meadow wonder</span></div>
+<div class="copy-box">children's animation score, warm, tender, calm piano, soft strings, wondrous, magical, harp glissando, light chimes, slow-moderate tempo, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">C · clips 11–15</span><span class="title">Hushed close</span></div>
+<div class="copy-box">children's animation score, delicate music box, soft solo strings, near silence, hushed, blooming into warm tender heartfelt theme, gentle harp, slow tempo, instrumental</div>
+</div>
+</section>
+<section class="episode" id="ep3">
+<h2>Episode 3 — "Benny és a Nagy Zivatar" ("Benny and the Big Storm")</h2>
+<div class="runtime">Runtime ~3:45</div>
+<div class="section-card">
+<div class="section-head"><span class="range">A · clips 1–4</span><span class="title">Storm approaching</span></div>
+<div class="copy-box">children's animation score, uneasy but warm, tense tremolo strings, low woodwinds, anticipation, distant rumbling percussion, storm approaching, moderate tempo, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">B · clips 5–9</span><span class="title">Tender search in the rain</span></div>
+<div class="copy-box">children's animation score, tender, warm, gentle tension undercurrent, soft cello, piano, understated rain percussion, slow-moderate tempo, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">C · clips 10–15</span><span class="title">Flinch, laugh, resolve</span></div>
+<div class="copy-box">children's animation score, playful comedic pizzicato strings, light woodwinds, giggly, calm tender piano, warm triumphant finale, instrumental</div>
+</div>
+</section>
+<section class="episode" id="ep4">
+<h2>Episode 4 — "Luna Sosem Áll Meg" ("Luna Never Stops")</h2>
+<div class="runtime">Runtime ~3:45</div>
+<div class="section-card">
+<div class="section-head"><span class="range">A · clips 1–3</span><span class="title">Watchful from a distance</span></div>
+<div class="copy-box">children's animation score, warm, slightly distant, playful, light strings, woodwinds, steady watchful protective mood, sustained low strings, moderate tempo, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">B · clips 4–8</span><span class="title">Gentle questions, patient crown-making</span></div>
+<div class="copy-box">children's animation score, gentle curious, soft plucked strings, woodwind melody, patient tender, soft piano, slow tempo, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">C · clips 9–15</span><span class="title">Letting herself rest</span></div>
+<div class="copy-box">children's animation score, tender vulnerable, solo strings, piano, warm settled harmony, bright joyful close, gentle harp accents, instrumental</div>
+</div>
+</section>
+<section class="episode" id="ep5">
+<h2>Episode 5 — "A Titkos Ösvény" ("The Secret Shortcut")</h2>
+<div class="runtime">Runtime ~3:45</div>
+<div class="section-card">
+<div class="section-head"><span class="range">A · clips 1–5</span><span class="title">Bright adventurous setoff</span></div>
+<div class="copy-box">children's animation score, bright eager adventurous, upbeat plucked strings, playful woodwinds, energetic, moderate-fast tempo, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">B · clips 6–10</span><span class="title">Lost in Old Hollow</span></div>
+<div class="copy-box">children's animation score, tense but playful, uncertain tremolo strings, mysterious woodwind textures, lost-in-forest mood, moderate tempo, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">C · clips 11–15</span><span class="title">Benny leads the way home</span></div>
+<div class="copy-box">children's animation score, warm settling, gentle strings, piano, bright triumphant joyful finale, instrumental</div>
+</div>
+</section>
+<section class="episode" id="ep6">
+<h2>Episode 6 — "A Bogyós Titok" ("The Berry Secret")</h2>
+<div class="runtime">Runtime ~4:00 (incl. episode-intro pre-roll)</div>
+<div class="section-card">
+<div class="section-head"><span class="range">A · clips 1–4</span><span class="title">A secret discovery</span></div>
+<div class="copy-box">children's animation score, playful curious, light pizzicato strings, woodwinds, forest discovery, warm quietly wistful solo cello, piano, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">B · clips 5–10</span><span class="title">Caught in the act</span></div>
+<div class="copy-box">children's animation score, light eager quick playful strings, awkward gently tense, soft suspended strings, hesitant woodwinds, moderate tempo, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">C · clips 11–16</span><span class="title">Sharing the feast</span></div>
+<div class="copy-box">children's animation score, warm joyful, bouncy strings, woodwinds, laughing together, content warm harmony, bright cheerful close, instrumental</div>
+</div>
+</section>
+<section class="episode" id="ep7">
+<h2>Episode 7 — "Az Ingó Palló" ("The Wobbly Plank")</h2>
+<div class="runtime">Runtime ~4:00 (incl. episode-intro pre-roll)</div>
+<div class="section-card">
+<div class="section-head"><span class="range">A · clips 1–3</span><span class="title">Setting off</span></div>
+<div class="copy-box">children's animation score, warm everyday, gentle strings, woodwinds, moderate tempo, calm adventurous, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">B · clips 4–5</span><span class="title">Reassurance, first steps</span></div>
+<div class="copy-box">children's animation score, gentle encouraging, soft piano, warm strings, slow-moderate tempo, reassuring, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">C · clips 6–9</span><span class="title">The slip and the catch</span></div>
+<div class="copy-box">children's animation score, brief tense tremolo strings, sudden percussive hit, startling moment resolving into warm steadying strings, piano, reassuring rescue, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">D · clips 10–16</span><span class="title">Home safe, proud</span></div>
+<div class="copy-box">children's animation score, settled proud, warm strings, bright warm joyful finale, instrumental</div>
+</div>
+</section>
+<section class="episode" id="ep8">
+<h2>Episode 8 — "Ki ér előbb?" ("Who Gets There First?")</h2>
+<div class="runtime">Runtime ~4:00 (incl. episode-intro pre-roll)</div>
+<div class="section-card">
+<div class="section-head"><span class="range">A · clips 1–4</span><span class="title">The race begins</span></div>
+<div class="copy-box">children's animation score, bright playful comedic, bouncy pizzicato strings, energetic light percussion, fast tempo, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">B · clips 5–9</span><span class="title">Frantic comedic chase</span></div>
+<div class="copy-box">children's animation score, fast frantic comedic chase, playful bassoon, pizzicato strings, snappy percussion, slapstick energetic tempo, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">C · clips 10–13</span><span class="title">Collision and splash</span></div>
+<div class="copy-box">children's animation score, big comedic percussive hit, quick playful chase cue, splashy energetic strings, light percussion, water, instrumental</div>
+</div>
+<div class="section-card">
+<div class="section-head"><span class="range">D · clips 14–16</span><span class="title">Playing together</span></div>
+<div class="copy-box">children's animation score, warm silly cheerful, gentle bouncy strings, bright warm finale, instrumental</div>
+</div>
+</section>
+<footer>Whisperwood Forest &middot; forrás: az egyes epizódok <code>episodes/episode-N-*.md</code> fájljainak zenei íve, Suno-tag formátumra átalakítva.</footer>
+</div>
+
+<script>
+  (function () {
+    function wireCopy(box) {
+      var text = box.textContent.trim();
+      var btn = document.createElement('button');
+      btn.className = 'copy';
+      btn.type = 'button';
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', function () {
+        var markCopied = function () {
+          btn.textContent = 'Copied';
+          btn.classList.add('copied');
+          setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1400);
+        };
+        var fallbackCopy = function () {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          try { document.execCommand('copy'); markCopied(); }
+          catch (e) { btn.textContent = 'Copy failed'; setTimeout(function () { btn.textContent = 'Copy'; }, 1400); }
+          document.body.removeChild(ta);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(markCopied, fallbackCopy);
+        } else { fallbackCopy(); }
+      });
+      box.appendChild(btn);
+    }
+    document.querySelectorAll('.copy-box').forEach(wireCopy);
+  })();
+</script>
